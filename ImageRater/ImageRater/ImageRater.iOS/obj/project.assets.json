@@ -153,8 +153,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -316,8 +316,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -479,8 +479,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -642,8 +642,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -1006,24 +1006,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {},
+    "C:\\Users\\jheom\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\ImageRater.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\ImageRater.iOS.csproj",
       "projectName": "ImageRater.iOS",
-      "projectPath": "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\ImageRater.iOS.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\obj\\",
+      "projectPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\ImageRater.iOS.csproj",
+      "packagesPath": "C:\\Users\\jheom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jheom\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1037,8 +1037,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {
-              "projectPath": "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj"
+            "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {
+              "projectPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj"
             }
           }
         }
@@ -1069,5 +1069,33 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.3.1 to 1.1.0. Reference the package directly from the project to select a different version. \r\n ImageRater.iOS -> ImageRater -> Xamarin.Essentials (>= 1.3.1) \r\n ImageRater.iOS -> Xamarin.Essentials (>= 1.1.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.2.0.848062 to 4.1.0.555618. Reference the package directly from the project to select a different version. \r\n ImageRater.iOS -> ImageRater -> Xamarin.Forms (>= 4.2.0.848062) \r\n ImageRater.iOS -> Xamarin.Forms (>= 4.1.0.555618)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

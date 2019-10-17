@@ -1,0 +1,155 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.UWP\\ImageRater.UWP.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.UWP\\ImageRater.UWP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.UWP\\ImageRater.UWP.csproj",
+        "projectName": "ImageRater.UWP",
+        "projectPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.UWP\\ImageRater.UWP.csproj",
+        "packagesPath": "C:\\Users\\jheom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater.UWP\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jheom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.17763"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.17763": {
+            "projectReferences": {
+              "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {
+                "projectPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.17763": {
+          "dependencies": {
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[6.2.9, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.2.0.848062, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj",
+        "projectName": "ImageRater",
+        "projectPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj",
+        "packagesPath": "C:\\Users\\jheom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jheom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.2.0.848062, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
