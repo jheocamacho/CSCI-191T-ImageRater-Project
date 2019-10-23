@@ -9,8 +9,9 @@
     <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand" Padding="10">
         <Label Text="Image Rater" FontSize="Header" />
         <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand" Padding="20">
+            <Image x:Name="PhotoImage" />
             <Label Text="Please select an image to upload" />
-            <Button Text="Upload" />
+            <Button Text="Upload" x:Name="CameraButton" Clicked="CameraButton_Clicked"/>
         </StackLayout>
     </StackLayout>
 

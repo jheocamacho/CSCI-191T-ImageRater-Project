@@ -2,6 +2,10 @@
 <Roots >
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
+      <RootProperty Name="MergedDictionaries" />
+      <RootProperty Name="Source" />
+    </RootType>
     <RootType FullName="Xamarin.Forms.Platform.UWP.WindowsPage">
       <RootProperty Name="Background" />
     </RootType>

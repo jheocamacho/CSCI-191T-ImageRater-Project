@@ -30,4 +30,5 @@ Assets\Wide310x150Logo.scale-400.png
 App.xbf
 ImageRater.UWP.xr.xml
 MainPage.xbf
+Microsoft.UI.Xaml\DensityStyles\Compact.xbf
 Properties\Default.rd.xml

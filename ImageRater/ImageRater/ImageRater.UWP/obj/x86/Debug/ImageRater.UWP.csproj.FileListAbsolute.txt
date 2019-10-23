@@ -120,3 +120,10 @@ C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636161003180000000.json
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885562160000000.json
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Plugin.Permissions.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Plugin.Media.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xaml
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\Plugin.Permissions.pri.xml
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\Plugin.Media.pri.xml

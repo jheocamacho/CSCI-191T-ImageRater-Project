@@ -6,6 +6,6 @@ C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\ImageRater.AssemblyInfoInputs.cache
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\ImageRater.AssemblyInfo.cs
-C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\ImageRater.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\ImageRater.pdb
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\XamlC.stamp
