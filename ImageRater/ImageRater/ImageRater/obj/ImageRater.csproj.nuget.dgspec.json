@@ -49,6 +49,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Plugin.Permissions": {
+              "target": "Package",
+              "version": "[3.0.0.12, )"
+            },
             "Xam.Plugin.Media": {
               "target": "Package",
               "version": "[4.0.1.5, )"
@@ -59,7 +63,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.908675, )"
+              "version": "[4.3.0.947036, )"
             }
           },
           "imports": [

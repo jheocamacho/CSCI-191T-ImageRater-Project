@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>9E0E2FF6E519DB13C11E804187781E1BC0B0DA4F1286437F49CF6C17CF170F41</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>B3F35ED6FA63BD7452F141371990BFB921EE09DB50BD9F4F15628234B43C791C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c1f483fb-ff35-4786-9cd7-6192dc3cd244_1.0.0.0_x86__rra5fzz7fp7st</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c1f483fb-ff35-4786-9cd7-6192dc3cd244_rra5fzz7fp7st!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c1f483fb-ff35-4786-9cd7-6192dc3cd244</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-22T22:29:42.620</Modified>
+      <Modified>2019-11-03T05:38:39.583</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\ImageRater.UWP.exe">
       <PackagePath>entrypoint\ImageRater.UWP.exe</PackagePath>
-      <Modified>2019-10-22T22:29:39.260</Modified>
+      <Modified>2019-11-03T05:38:36.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\plugin.permissions\3.0.0.12\lib\uap10.0.10240\Plugin.Permissions.dll">
       <PackagePath>Plugin.Permissions.dll</PackagePath>
@@ -58,25 +58,25 @@
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
       <Modified>2019-09-19T07:33:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.908675\lib\uap10.0\Xamarin.Forms.Core.dll">
+    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.947036\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
-      <Modified>2019-10-17T14:16:42.000</Modified>
+      <Modified>2019-10-29T08:36:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.908675\lib\uap10.0\Xamarin.Forms.Platform.UAP.dll">
+    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.947036\lib\uap10.0\Xamarin.Forms.Platform.UAP.dll">
       <PackagePath>Xamarin.Forms.Platform.UAP.dll</PackagePath>
-      <Modified>2019-10-17T14:16:42.000</Modified>
+      <Modified>2019-10-29T08:36:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.908675\lib\uap10.0\Xamarin.Forms.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.947036\lib\uap10.0\Xamarin.Forms.Platform.dll">
       <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
-      <Modified>2019-10-17T14:16:42.000</Modified>
+      <Modified>2019-10-29T08:36:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.908675\lib\uap10.0\Xamarin.Forms.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.947036\lib\uap10.0\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
-      <Modified>2019-10-17T14:16:44.000</Modified>
+      <Modified>2019-10-29T08:36:08.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\bin\Debug\netstandard2.0\ImageRater.dll">
       <PackagePath>ImageRater.dll</PackagePath>
-      <Modified>2019-10-22T22:29:25.760</Modified>
+      <Modified>2019-11-03T05:38:23.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -229,15 +229,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf">
       <PackagePath>Microsoft.UI.Xaml\DensityStyles\Compact.xbf</PackagePath>
-      <Modified>2019-10-22T22:29:38.872</Modified>
+      <Modified>2019-11-03T05:38:36.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-10-22T22:29:38.872</Modified>
+      <Modified>2019-11-03T05:38:36.506</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-10-22T22:29:38.873</Modified>
+      <Modified>2019-11-03T05:38:36.506</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -251,17 +251,17 @@
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2019-06-07T18:59:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.908675\lib\uap10.0\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\xamarin.forms\4.3.0.947036\lib\uap10.0\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
-      <Modified>2019-10-17T14:16:38.000</Modified>
+      <Modified>2019-10-29T08:36:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-10-22T17:30:19.786</Modified>
+      <Modified>2019-11-03T05:36:45.416</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Core\ImageRater.UWP.exe">
       <PackagePath>ImageRater.UWP.exe</PackagePath>
-      <Modified>2019-10-22T22:29:42.595</Modified>
+      <Modified>2019-11-03T05:38:39.561</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
