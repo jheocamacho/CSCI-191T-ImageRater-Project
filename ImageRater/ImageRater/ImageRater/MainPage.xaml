@@ -5,29 +5,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ImageRater.MainPage">
-    <ScrollView>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand" Padding="10">
-            <Label Text="Image Rater" FontSize="40" />
-            <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand" Padding="10">
-                <Label Text="Please take a photo or upload your own." />
-                <Button Text="Take Photo" x:Name="TakePhotoButton" Clicked="TakePhotoButton_Clicked"/>
-                <Button Text="Upload Photo" x:Name="UploadPhotoButton" Clicked="UploadPhotoButton_Clicked" />
-                <Picker Title="Select a category for your image." Margin="10" x:Name="CategoryPicker" >
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Landscape</x:String>
-                            <x:String>People</x:String>
-                            <x:String>Food</x:String>
-                            <x:String>Animal</x:String>
-                            <x:String>Fashion</x:String>
-                            <x:String>Sports</x:String>
-                            <x:String>Architecture</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-                <Image x:Name="PhotoImage" HeightRequest="240" />
-            </StackLayout>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand" Padding="10">
+        <Label Text="Image Rater" FontSize="40" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand" Padding="10">
+            <Label Text="Please take a photo or upload your own." />
+            <Button Text="Take Photo" x:Name="TakePhotoButton" Clicked="TakePhotoButton_Clicked"/>
+            <Button Text="Upload Photo" x:Name="UploadPhotoButton" Clicked="UploadPhotoButton_Clicked" />
+            <Picker Title="Select a category for your image." Margin="10" x:Name="CategoryPicker" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Landscape</x:String>
+                        <x:String>People</x:String>
+                        <x:String>Food</x:String>
+                        <x:String>Animal</x:String>
+                        <x:String>Fashion</x:String>
+                        <x:String>Sports</x:String>
+                        <x:String>Architecture</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Image x:Name="PhotoImage" HeightRequest="240" />
+            <Label Text="Date and Time" x:Name="DateTimeLabel" />
+            <Label Text="Location" x:Name="LocationLabel" />
+            <Label Text="Category" x:Name="CategoryLabel" />
+            <Button Text="Submit" x:Name="SubmitButton" Clicked="SubmitButton_Clicked" />
         </StackLayout>
-    </ScrollView>
-
+    </StackLayout>
 </ContentPage>

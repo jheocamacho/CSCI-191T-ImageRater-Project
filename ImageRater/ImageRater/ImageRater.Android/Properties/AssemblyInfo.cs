@@ -36,3 +36,10 @@ using Android.App;
 // Filter out devices that do not support required hardware
 [assembly: UsesFeature("android.hardware.camera", Required = true)]
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = true)]
+
+// Location services and permissions
+[assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]
+[assembly: UsesPermission(Android.Manifest.Permission.AccessFineLocation)]
+[assembly: UsesFeature("android.hardware.location", Required = false)]
+[assembly: UsesFeature("android.hardware.location.gps", Required = false)]
+[assembly: UsesFeature("android.hardware.location.network", Required = false)]

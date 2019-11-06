@@ -230,6 +230,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "Plugin.Permissions/3.0.0.12": {
         "type": "package",
         "dependencies": {
@@ -363,6 +372,18 @@
           }
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/4.0.1.5": {
         "type": "package",
         "dependencies": {
@@ -414,14 +435,31 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "ImageRater/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "Plugin.Permissions": "3.0.0.12",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.947036"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -659,6 +697,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -961,6 +1008,18 @@
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/4.0.1.5": {
         "type": "package",
         "dependencies": {
@@ -1012,14 +1071,31 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "ImageRater/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "Plugin.Permissions": "3.0.0.12",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.947036"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -1257,6 +1333,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -1560,6 +1645,18 @@
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/4.0.1.5": {
         "type": "package",
         "dependencies": {
@@ -1611,14 +1708,31 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "ImageRater/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "Plugin.Permissions": "3.0.0.12",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.947036"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -1856,6 +1970,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -2156,6 +2279,18 @@
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/4.0.1.5": {
         "type": "package",
         "dependencies": {
@@ -2207,14 +2342,31 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "ImageRater/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "Plugin.Permissions": "3.0.0.12",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.947036"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -2452,6 +2604,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -2754,6 +2915,18 @@
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/4.0.1.5": {
         "type": "package",
         "dependencies": {
@@ -2805,14 +2978,31 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "ImageRater/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "Plugin.Permissions": "3.0.0.12",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.947036"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -3050,6 +3240,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -3353,6 +3552,18 @@
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/4.0.1.5": {
         "type": "package",
         "dependencies": {
@@ -3404,14 +3615,31 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "ImageRater/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "Plugin.Permissions": "3.0.0.12",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.947036"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -3649,6 +3877,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -3951,6 +4188,18 @@
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/4.0.1.5": {
         "type": "package",
         "dependencies": {
@@ -4002,14 +4251,31 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "ImageRater/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "Plugin.Permissions": "3.0.0.12",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.947036"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -4247,6 +4513,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -4550,6 +4825,18 @@
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/4.5.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Media/4.0.1.5": {
         "type": "package",
         "dependencies": {
@@ -4601,14 +4888,31 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/4.3.0.947036": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "ImageRater/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "Plugin.Permissions": "3.0.0.12",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
-          "Xamarin.Forms": "4.3.0.947036"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Maps": "4.3.0.947036"
         },
         "compile": {
           "bin/placeholder/ImageRater.dll": {}
@@ -5157,6 +5461,36 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
       ]
     },
     "Plugin.Permissions/3.0.0.12": {
@@ -9167,6 +9501,33 @@
         "win2d.uwp.nuspec"
       ]
     },
+    "Xam.Plugin.Geolocator/4.5.0.6": {
+      "sha512": "Ro7peBDxsDXPc7J7yLx0ekAcXIfVTAXj/rXiBKiTgZ4Lm7KZJIU8PXOCcI4JztzT3MQrL8Rmka48il/ix0pwoA==",
+      "type": "package",
+      "path": "xam.plugin.geolocator/4.5.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Geolocator.dll",
+        "lib/monoandroid71/Plugin.Geolocator.xml",
+        "lib/netstandard1.0/Plugin.Geolocator.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.xml",
+        "lib/netstandard2.0/Plugin.Geolocator.dll",
+        "lib/netstandard2.0/Plugin.Geolocator.xml",
+        "lib/uap10.0.10240/Plugin.Geolocator.dll",
+        "lib/uap10.0.10240/Plugin.Geolocator.pri",
+        "lib/uap10.0.10240/Plugin.Geolocator.xml",
+        "lib/xamarinios10/Plugin.Geolocator.dll",
+        "lib/xamarinios10/Plugin.Geolocator.xml",
+        "lib/xamarinmac20/Plugin.Geolocator.dll",
+        "lib/xamarinmac20/Plugin.Geolocator.xml",
+        "lib/xamarintvos10/Plugin.Geolocator.dll",
+        "lib/xamarintvos10/Plugin.Geolocator.xml",
+        "readme.txt",
+        "xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
+        "xam.plugin.geolocator.nuspec"
+      ]
+    },
     "Xam.Plugin.Media/4.0.1.5": {
       "sha512": "a5l/M2Tl06BqBX/uhM/pr+q1jDkh2tRQr5Ne9rjAuD9VYn5STE+7kVFTzIUNPMnMr9PZLJkWP5WAr/tBN5oepw==",
       "type": "package",
@@ -9492,6 +9853,39 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.Maps/4.3.0.947036": {
+      "sha512": "CFzqd9+KVWvrm8S3LVFt5clmJu2853diExlwMgPL1vSvmKVf4s3OkjVsdGAEG9oLd3GPZcqlYz0YLRwFcMAN5g==",
+      "type": "package",
+      "path": "xamarin.forms.maps/4.3.0.947036",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Maps.xml",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.4.3.0.947036.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
+      ]
+    },
     "ImageRater/1.0.0": {
       "type": "project",
       "path": "../ImageRater/ImageRater.csproj",
@@ -9502,9 +9896,12 @@
     "UAP,Version=v10.0.17763": [
       "ImageRater >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.9",
+      "Newtonsoft.Json >= 12.0.2",
       "Plugin.Permissions >= 3.0.0.12",
+      "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xam.Plugin.Media >= 4.0.1.5",
-      "Xamarin.Forms >= 4.3.0.947036"
+      "Xamarin.Forms >= 4.3.0.947036",
+      "Xamarin.Forms.Maps >= 4.3.0.947036"
     ]
   },
   "packageFolders": {
@@ -9555,15 +9952,27 @@
             "target": "Package",
             "version": "[6.2.9, )"
           },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.2, )"
+          },
           "Plugin.Permissions": {
             "target": "Package",
             "version": "[3.0.0.12, )"
+          },
+          "Xam.Plugin.Geolocator": {
+            "target": "Package",
+            "version": "[4.5.0.6, )"
           },
           "Xam.Plugin.Media": {
             "target": "Package",
             "version": "[4.0.1.5, )"
           },
           "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[4.3.0.947036, )"
+          },
+          "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[4.3.0.947036, )"
           }
