@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Xamarin.Essentials;
 
 namespace ImageRater.UWP
 {
@@ -39,6 +40,8 @@ namespace ImageRater.UWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            Platform.MapServiceToken = "z4uZvILMl6nTu5Pmzc8n~9WSdnUuwdWSymZKxzMhD6A~AjUKWEkON7b9pnH9eRvjSAcsd_jxMfuglrA0YUTf3jljIyFYJndKSIZKuN4WkY3E";
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

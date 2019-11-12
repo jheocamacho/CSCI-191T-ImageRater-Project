@@ -10,7 +10,7 @@ namespace ImageRater.Model
         public string Location { get; set; }
         public string DateTime { get; set; }
         public string Category { get; set; }
-        //public 
+        public float Rating { get; set; }
         public Image Photo { get; set; }
 
         public Post()
@@ -18,13 +18,15 @@ namespace ImageRater.Model
             Location = "";
             DateTime = "";
             Category = "";
+            Rating = 0;
         }
 
-        public Post(string l, string dt, string c)
+        public Post(string l, string dt, string c, float r)
         {
             Location = l;
             DateTime = dt;
             Category = c;
+            Rating = r;
         }
     }
 }

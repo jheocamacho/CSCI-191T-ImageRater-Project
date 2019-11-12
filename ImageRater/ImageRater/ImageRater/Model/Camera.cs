@@ -8,7 +8,7 @@ namespace ImageRater.Model
 {
     static class Camera
     {
-        private static readonly Page page;
+        private static readonly Page alert = new Page();
 
         public static async void TakePhoto(Image Element)
         {
@@ -16,7 +16,7 @@ namespace ImageRater.Model
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakeVideoSupported)
             {
-                await page.DisplayAlert("No Camera", "No camera available.", "OK");
+                await alert.DisplayAlert("No Camera", "No camera available.", "OK");
                 return;
             }
 
@@ -35,7 +35,7 @@ namespace ImageRater.Model
         {
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
-                await page.DisplayAlert("No Upload", "Picking a photo is not supported.", "OK");
+                await alert.DisplayAlert("No Upload", "Picking a photo is not supported.", "OK");
                 return;
             }
 

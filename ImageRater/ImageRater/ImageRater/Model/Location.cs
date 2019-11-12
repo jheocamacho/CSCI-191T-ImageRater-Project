@@ -4,62 +4,38 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Plugin.Geolocator;
-using Plugin.Geolocator.Abstractions;
 using Xamarin.Essentials;
 
 namespace ImageRater.Model
 {
     static class Location
     {
-        public static bool IsLocationAvailable()
+        public static async Task<Xamarin.Essentials.Location> GetCurrentPosition()
         {
-            if (!CrossGeolocator.IsSupported)
-                return false;
+            var request = new GeolocationRequest(GeolocationAccuracy.Best);
+            var location = await Geolocation.GetLocationAsync(request);
 
-            return CrossGeolocator.Current.IsGeolocationAvailable;
-        }
-
-        public static async Task<Position> GetCurrentPosition()
-        {
-            Position position = null;
-
-            try
+            if (location != null)
             {
-                var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 100;
-
-                position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20), null, true);
-
+                Debug.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+                return location;
             }
-            catch (Exception ex)
+            else
             {
-                Debug.WriteLine("Unable to get location: " + ex);
-            }
-
-            if (position == null)
                 return null;
-
-            var output = string.Format("Time: {0} \nLat: {1} \nLong: {2} \nAltitude: {3} \nAltitude Accuracy: {4} \nAccuracy: {5} \nHeading: {6} \nSpeed: {7}",
-                    position.Timestamp, position.Latitude, position.Longitude,
-                    position.Altitude, position.AltitudeAccuracy, position.Accuracy, position.Heading, position.Speed);
-
-            Debug.WriteLine(output);
-
-            return position;
+            }
         }
 
-        public static async Task<Placemark> ReverseGeocodeCurrentLocation(Position currentLocation)
-        {            
+        public async static Task<Placemark> ReverseGeocodeCurrentLocation(Xamarin.Essentials.Location currentLocation)
+        {
             var lat = currentLocation.Latitude;
             var lon = currentLocation.Longitude;
-
+            
             var placemarks = await Geocoding.GetPlacemarksAsync(lat, lon);
+			var placemark = placemarks?.FirstOrDefault();
 
-            var placemark = placemarks?.FirstOrDefault();
-            if (placemark != null)
-            {
-                /*
+			if (placemark != null)
+            {				
                 var geocodeAddress =
                     $"AdminArea:       {placemark.AdminArea}\n" +
                     $"CountryCode:     {placemark.CountryCode}\n" +
@@ -71,12 +47,15 @@ namespace ImageRater.Model
                     $"SubLocality:     {placemark.SubLocality}\n" +
                     $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
                     $"Thoroughfare:    {placemark.Thoroughfare}\n";
-                */
 
-                return placemark;                
+                Debug.WriteLine(geocodeAddress);
+
+				return placemark;                
             }
-
-            return null;
+            else
+            {
+                return null;
+            }			
         }
     }
 }
