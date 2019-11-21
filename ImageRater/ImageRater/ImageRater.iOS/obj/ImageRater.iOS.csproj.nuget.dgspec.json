@@ -64,11 +64,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.947036, )"
+              "version": "[4.3.0.991211, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.3.0.947036, )"
+              "version": "[4.3.0.991211, )"
             }
           }
         }
@@ -152,11 +152,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.947036, )"
+              "version": "[4.3.0.991211, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.3.0.947036, )"
+              "version": "[4.3.0.991211, )"
             }
           },
           "imports": [
