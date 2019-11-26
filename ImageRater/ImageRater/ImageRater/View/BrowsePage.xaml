@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ImageRater.View.BrowsePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="ImageView"
+                     VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="CenterAndExpand">
+            <Label Text="Images to browse appear here." />
+            <Picker x:Name="OrganizeByPicker" Title="Select how to organize." >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Organize by location</x:String>
+                        <x:String>Organize by time</x:String>
+                        <x:String>Organize by category</x:String>
+                        <x:String>Organize by rating</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <BoxView BackgroundColor="WhiteSmoke" CornerRadius="10" WidthRequest="160" HeightRequest="160" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

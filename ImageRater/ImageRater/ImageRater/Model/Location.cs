@@ -26,7 +26,23 @@ namespace ImageRater.Model
             }
         }
 
-        public async static Task<Placemark> ReverseGeocodeCurrentLocation(Xamarin.Essentials.Location currentLocation)
+        public static async Task<Xamarin.Essentials.Location> GeocodeLocation(string address)
+        {
+            var locations = await Geocoding.GetLocationsAsync(address);
+
+            var location = locations?.FirstOrDefault();
+            if (location != null)
+            {
+                Debug.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+                return location;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static async Task<Placemark> ReverseGeocodeLocation(Xamarin.Essentials.Location currentLocation)
         {
             var lat = currentLocation.Latitude;
             var lon = currentLocation.Longitude;

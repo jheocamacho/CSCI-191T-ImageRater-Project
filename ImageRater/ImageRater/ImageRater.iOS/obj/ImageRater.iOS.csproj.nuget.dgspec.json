@@ -42,6 +42,12 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Mobile.BuildTools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.4.0.638, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -64,11 +70,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.947036, )"
+              "version": "[4.3.0.991211, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.3.0.947036, )"
+              "version": "[4.3.0.991211, )"
             }
           }
         }
@@ -124,6 +130,12 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Mobile.BuildTools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.4.0.638, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -152,11 +164,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.947036, )"
+              "version": "[4.3.0.991211, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.3.0.947036, )"
+              "version": "[4.3.0.991211, )"
             }
           },
           "imports": [

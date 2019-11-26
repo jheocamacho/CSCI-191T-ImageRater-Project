@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ImageRater.View;assembly=ImageRater"
+             mc:Ignorable="d"
+             x:Class="ImageRater.View.MasterPage">
+  <!--Pages can be added as references or inline-->
+  <local:BrowsePage Title="Browse" />
+  <local:PostPage Title="Post" />
+  <local:MapPage Title="Map" />
+</TabbedPage>

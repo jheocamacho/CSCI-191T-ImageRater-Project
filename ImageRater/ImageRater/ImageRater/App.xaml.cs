@@ -10,7 +10,7 @@ namespace ImageRater
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new View.MasterPage();
 		}
 
 		protected override void OnStart()
