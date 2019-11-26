@@ -2,6 +2,13 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Mobile.BuildTools/1.4.0.638": {
+        "type": "package",
+        "build": {
+          "build/Mobile.BuildTools.props": {},
+          "build/Mobile.BuildTools.targets": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -226,6 +233,13 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Mobile.BuildTools/1.4.0.638": {
+        "type": "package",
+        "build": {
+          "build/Mobile.BuildTools.props": {},
+          "build/Mobile.BuildTools.targets": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -450,6 +464,13 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Mobile.BuildTools/1.4.0.638": {
+        "type": "package",
+        "build": {
+          "build/Mobile.BuildTools.props": {},
+          "build/Mobile.BuildTools.targets": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -674,6 +695,13 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Mobile.BuildTools/1.4.0.638": {
+        "type": "package",
+        "build": {
+          "build/Mobile.BuildTools.props": {},
+          "build/Mobile.BuildTools.targets": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -899,6 +927,28 @@
     }
   },
   "libraries": {
+    "Mobile.BuildTools/1.4.0.638": {
+      "sha512": "nvsHqIjpGCv3q6hBLi+58y4dgaInnFqyZcrdhCcZuV6om0nCtQcvo/RwpEY0uYYQAzJG5XHJmoKSS287QDKcZQ==",
+      "type": "package",
+      "path": "mobile.buildtools/1.4.0.638",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Mobile.BuildTools.dll",
+        "build/Mobile.BuildTools.pdb",
+        "build/Mobile.BuildTools.props",
+        "build/Mobile.BuildTools.targets",
+        "build/NUglify.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/SharpScss.dll",
+        "build/runtimes/linux-x64/native/libsass.so",
+        "build/runtimes/osx-x64/native/libsass.dylib",
+        "build/runtimes/win-x64/native/libsass.dll",
+        "build/runtimes/win-x86/native/libsass.dll",
+        "mobile.buildtools.1.4.0.638.nupkg.sha512",
+        "mobile.buildtools.nuspec"
+      ]
+    },
     "Newtonsoft.Json/12.0.3": {
       "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
@@ -1395,6 +1445,7 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "ImageRater >= 1.0.0",
+      "Mobile.BuildTools >= 1.4.0.638",
       "Newtonsoft.Json >= 12.0.3",
       "Plugin.Permissions >= 3.0.0.12",
       "Xam.Plugin.Geolocator >= 4.5.0.6",
@@ -1446,6 +1497,12 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Mobile.BuildTools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.4.0.638, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"

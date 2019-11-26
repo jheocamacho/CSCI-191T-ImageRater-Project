@@ -23,9 +23,9 @@ namespace ImageRater.UWP
     public sealed partial class MainPage
     {
         public MainPage()
-        {
+        {            
             this.InitializeComponent();
-            Xamarin.FormsMaps.Init("z4uZvILMl6nTu5Pmzc8n~9WSdnUuwdWSymZKxzMhD6A~AjUKWEkON7b9pnH9eRvjSAcsd_jxMfuglrA0YUTf3jljIyFYJndKSIZKuN4WkY3E");
+            Xamarin.FormsMaps.Init(Keys.BingAPIKey);
             LoadApplication(new ImageRater.App());
         }
     }

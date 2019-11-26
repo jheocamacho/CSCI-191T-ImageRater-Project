@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "ImageRater/1.0.0": {
         "dependencies": {
+          "Mobile.BuildTools": "1.4.0.638",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "Plugin.Permissions": "3.0.0.12",
@@ -23,6 +24,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Mobile.BuildTools/1.4.0.638": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -123,6 +125,13 @@
       "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Mobile.BuildTools/1.4.0.638": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nvsHqIjpGCv3q6hBLi+58y4dgaInnFqyZcrdhCcZuV6om0nCtQcvo/RwpEY0uYYQAzJG5XHJmoKSS287QDKcZQ==",
+      "path": "mobile.buildtools/1.4.0.638",
+      "hashPath": "mobile.buildtools.1.4.0.638.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",

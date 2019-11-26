@@ -9,6 +9,7 @@ using Android.OS;
 using Plugin.Permissions;
 using Plugin.CurrentActivity;
 using Android;
+using System.Xml;
 
 namespace ImageRater.Droid
 {

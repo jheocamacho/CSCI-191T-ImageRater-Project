@@ -34,11 +34,13 @@ paths;C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\Imag
 paths;obj\Debug\90\res\xml\file_paths.xml
 resources;C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\lp\46\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
+resources;obj\Debug\90\res\values\keys.xml
 resources;obj\Debug\90\res\values\styles.xml
 set;C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\lp\46\jl\res\anim\enterfromleft.xml
 set;C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\lp\46\jl\res\anim\enterfromright.xml
 set;C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\lp\46\jl\res\anim\exittoleft.xml
 set;C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\lp\46\jl\res\anim\exittoright.xml
+string;obj\Debug\90\res\values\keys.xml
 style;C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\lp\46\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
 translate;C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\lp\46\jl\res\anim\enterfromleft.xml

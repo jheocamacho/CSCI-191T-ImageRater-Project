@@ -47,6 +47,12 @@
               "target": "Package",
               "version": "[6.2.9, )"
             },
+            "Mobile.BuildTools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.4.0.638, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -146,6 +152,12 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Mobile.BuildTools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.4.0.638, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
