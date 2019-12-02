@@ -1,37 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using System.IO;
+using SQLite;
+using System.Runtime.CompilerServices;
 
 namespace ImageRater.Model
 {
-    [Serializable]
-    class Post
+    public class Post : INotifyPropertyChanged
     {
-        public Placemark Location { get; set; }
-        public string DateTime { get; set; }
-        public string Category { get; set; }
-        public float Rating { get; set; }        
-        public Image Photo { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChange([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        // ID for each new post, saved in database
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+
+        private string location;
+        private string datetime;
+        private string tags;
+        private int rating;
+        private Image photo;
+
+        public string Location
+        {
+            get { return location; }
+            set { location = value; OnPropertyChange(); }
+        }
+
+        public string DateTime
+        {
+            get { return datetime; }
+            set { datetime = value; OnPropertyChange(); }
+        }
+
+        public string Tags
+        {
+            get { return tags; }
+            set { tags = value; OnPropertyChange(); }
+        }
+
+        public int Rating
+        {
+            get { return rating; }
+            set { rating = value; OnPropertyChange(); }
+        }
+
+        public Image Photo
+        {
+            get { return photo; }
+            set { photo = value; OnPropertyChange(); }
+        }
+
         //public string Base64Image { get; set; }
 
-        public Post()
-        {
-            Location = null;
-            DateTime = "";
-            Category = "";
-            Rating = 0;
-        }
-
-        public Post(Placemark l, string dt, string c, float r)
-        {
-            Location = l;
-            DateTime = dt;
-            Category = c;
-            Rating = r;
-        }
         /*
         public void SerializePhoto(object PhotoImage)
         {

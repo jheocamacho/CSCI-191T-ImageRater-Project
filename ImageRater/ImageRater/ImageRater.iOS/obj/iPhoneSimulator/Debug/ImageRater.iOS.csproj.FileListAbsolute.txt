@@ -62,3 +62,9 @@ C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\obj\iPhoneSimulator\Debug\ImageRater.iOS.csproj.CopyComplete
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\obj\iPhoneSimulator\Debug\ImageRater.iOS.exe
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\obj\iPhoneSimulator\Debug\ImageRater.iOS.pdb
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\bin\iPhoneSimulator\Debug\SQLite-net.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.core.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.provider.sqlite3.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.iOS\bin\iPhoneSimulator\Debug\ImageRater.dll.mdb

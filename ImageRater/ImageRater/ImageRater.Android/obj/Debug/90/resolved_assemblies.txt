@@ -9,6 +9,12 @@ C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\Plugin.Geolocator.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\Plugin.Media.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\Plugin.Permissions.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\SQLite-net.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_green.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\SQLitePCLRaw.core.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Core.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Numerics.dll
@@ -77,4 +83,14 @@ C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Web.Services.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Collections.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Runtime.Extensions.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Linq.Expressions.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Reflection.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Diagnostics.Debug.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Threading.Tasks.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Linq.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Threading.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Reflection.Extensions.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\System.Globalization.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.Android\obj\Debug\90\android\assets\Mono.Security.dll

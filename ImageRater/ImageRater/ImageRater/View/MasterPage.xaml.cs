@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ImageRater.ViewModel;
 
 namespace ImageRater.View
 {
@@ -15,6 +16,7 @@ namespace ImageRater.View
         public MasterPage()
         {
             InitializeComponent();
+            BindingContext = new PostViewModel();
         }
     }
 }

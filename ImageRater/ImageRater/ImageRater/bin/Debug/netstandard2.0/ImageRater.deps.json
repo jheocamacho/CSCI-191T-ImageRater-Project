@@ -17,7 +17,8 @@
           "Xam.Plugin.Media": "4.0.1.5",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.991211",
-          "Xamarin.Forms.Maps": "4.3.0.991211"
+          "Xamarin.Forms.Maps": "4.3.0.991211",
+          "sqlite-net-pcl": "1.6.292"
         },
         "runtime": {
           "ImageRater.dll": {}
@@ -42,6 +43,45 @@
         "runtime": {
           "lib/netstandard2.0/Plugin.Permissions.dll": {
             "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "sqlite-net-pcl/1.6.292": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "SQLitePCLRaw.bundle_green": "1.1.13"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {
+            "assemblyVersion": "1.6.292.0",
+            "fileVersion": "1.6.292.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.13": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "SQLitePCLRaw.core": "1.1.13"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {
+            "assemblyVersion": "1.1.13.388",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "1.1.13.388",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/1.1.13": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "1.1.13.388",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -153,6 +193,27 @@
       "sha512": "sha512-VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
       "path": "plugin.permissions/3.0.0.12",
       "hashPath": "plugin.permissions.3.0.0.12.nupkg.sha512"
+    },
+    "sqlite-net-pcl/1.6.292": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TZPs206/ZZXhDAgCzxE5Dmw1enkRmtpd1RKt+dLJA6Kvml4RxwkasRs4js2kijtGxik1SLCs39rh9nl9YFwrYg==",
+      "path": "sqlite-net-pcl/1.6.292",
+      "hashPath": "sqlite-net-pcl.1.6.292.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_green/1.1.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E0Hm/XTfleE/LlrRZVucB1dQqDlIDPgqvkFymbGqMO7bSaoB6R2X5Cgzq/RDxBFSzHjpzet2Tp5Kar8faLSZ+Q==",
+      "path": "sqlitepclraw.bundle_green/1.1.13",
+      "hashPath": "sqlitepclraw.bundle_green.1.1.13.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/1.1.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I8Q9qL1urPegoyZ5uI32lgqsxl8aPRZAyVBJbO+0T/zlGz/LBc8vhRVyDyCOU9LWWpV8dYpT0nCpuLv1ua6zkA==",
+      "path": "sqlitepclraw.core/1.1.13",
+      "hashPath": "sqlitepclraw.core.1.1.13.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Threading.Tasks;
 using Plugin.Media;
 using Xamarin.Forms;
 
@@ -8,15 +6,13 @@ namespace ImageRater.Model
 {
     static class Camera
     {
-        private static readonly Page alert = new Page();
-
-        public static async void TakePhoto(Image Element)
+        public static async Task TakePhoto(Image Element)
         {
             await CrossMedia.Current.Initialize();
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakeVideoSupported)
             {
-                await alert.DisplayAlert("No Camera", "No camera available.", "OK");
+                await Application.Current.MainPage.DisplayAlert("No Camera", "No camera available.", "OK");
                 return;
             }
 
@@ -31,11 +27,11 @@ namespace ImageRater.Model
             Element.Source = ImageSource.FromStream(() => file.GetStream());
         }
 
-        public static async void UploadPhoto(Image Element)
+        public static async Task UploadPhoto(Image Element)
         {
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
-                await alert.DisplayAlert("No Upload", "Picking a photo is not supported.", "OK");
+                await Application.Current.MainPage.DisplayAlert("No Upload", "Picking a photo is not supported.", "OK");
                 return;
             }
 

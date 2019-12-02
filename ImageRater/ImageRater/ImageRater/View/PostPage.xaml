@@ -7,17 +7,17 @@
              x:Class="ImageRater.View.PostPage">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand" Padding="10">
-            <Label Text="Image Rater" FontSize="40" />
+            <Label Text="Post" FontSize="40" />
             <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand" Padding="10">
                 <Label Text="Please take a photo or upload your own." />
-                <Button Text="Take Photo" x:Name="TakePhotoButton" Clicked="TakePhotoButton_Clicked"/>
-                <Button Text="Upload Photo" x:Name="UploadPhotoButton" Clicked="UploadPhotoButton_Clicked" />
-                <Entry Placeholder="Enter a Category" Margin="10" x:Name="CategoryEntry" />
-                <Image x:Name="PhotoImage" HeightRequest="240" />
-                <Label Text="Date and Time" x:Name="DateTimeLabel" />
-                <Label Text="Location" x:Name="LocationLabel" />
-                <Label Text="Category" x:Name="CategoryLabel" />
-                <Button Text="Submit" x:Name="SubmitButton" Clicked="SubmitButton_Clicked" />
+                <Button Text="Take Photo" x:Name="TakePhotoButton" Command="{Binding TakePhotoCommand}" />
+                <Button Text="Upload Photo" x:Name="UploadPhotoButton" Command="{Binding UploadPhotoCommand}" />
+                <Entry Placeholder="Enter a tag" Text="{Binding CurrentTags}" Margin="10" x:Name="CategoryEntry" />
+                <Image HeightRequest="100" Source="{Binding CurrentPhoto}"/>
+                <Label Text="{Binding DateTime}" />
+                <Label Text="{Binding Location}" />
+                <Label Text="{Binding Tags}" />
+                <Button Text="Submit" x:Name="SubmitButton" Command="{Binding CreatePostCommand}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

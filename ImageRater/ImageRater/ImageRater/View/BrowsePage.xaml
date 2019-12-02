@@ -8,8 +8,9 @@
     <ContentPage.Content>
         <StackLayout x:Name="ImageView"
                      VerticalOptions="CenterAndExpand" 
-                     HorizontalOptions="CenterAndExpand">
-            <Label Text="Images to browse appear here." />
+                     HorizontalOptions="CenterAndExpand"
+                     Padding="10">
+            
             <Picker x:Name="OrganizeByPicker" Title="Select how to organize." >
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -20,7 +21,22 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            <BoxView BackgroundColor="WhiteSmoke" CornerRadius="10" WidthRequest="160" HeightRequest="160" />
+
+            <CollectionView x:Name="collectionView" ItemsSource="{Binding Posts}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="8">
+                                <Image Source="{Binding PhotoImage}" />
+                                <Label Text="{Binding Tags}" FontAttributes="Bold" />
+                                <Label Text="{Binding DateTime}"/>
+                                <Label Text="{Binding Location}"/>
+                                <Label Text="{Binding Rating}"/>
+                            </StackLayout>                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

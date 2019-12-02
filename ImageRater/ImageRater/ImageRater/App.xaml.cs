@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ImageRater.Model;
+using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,7 +8,21 @@ namespace ImageRater
 {
 	public partial class App : Application
 	{
-		public App()
+        static Database database;
+
+        public static Database Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new Model.Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "posts.db3"));
+                }
+                return database;
+            }
+        }
+
+        public App()
 		{
 			InitializeComponent();
 
