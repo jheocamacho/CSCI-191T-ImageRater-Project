@@ -10,33 +10,45 @@
                      VerticalOptions="CenterAndExpand" 
                      HorizontalOptions="CenterAndExpand"
                      Padding="10">
-            
-            <Picker x:Name="OrganizeByPicker" Title="Select how to organize." >
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Organize by location</x:String>
-                        <x:String>Organize by time</x:String>
-                        <x:String>Organize by category</x:String>
-                        <x:String>Organize by rating</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
+
+            <StackLayout Margin="8">
+                <Button Text="{Binding SwipeMode}" Command="{Binding SwipeModeCommand}" />
+                <Picker x:Name="OrganizeByPicker" Title="Select how to organize." >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Organize by location</x:String>
+                            <x:String>Organize by time</x:String>
+                            <x:String>Organize by category</x:String>
+                            <x:String>Organize by rating</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
 
             <CollectionView x:Name="collectionView" ItemsSource="{Binding Posts}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Margin="8">
-                                <Image Source="{Binding PhotoImage}" />
+                        <ContentView>
+                        <Frame BackgroundColor="WhiteSmoke" CornerRadius="4" HasShadow="True" Padding="5" Margin="5">
+                            <Frame.GestureRecognizers>
+                                <SwipeGestureRecognizer Direction="Right" Command="{Binding SwipeRightCommand}" CommandParameter="Right" />
+                                <SwipeGestureRecognizer Direction="Left" Command="{Binding SwipeLeftCommand}" CommandParameter="Left" />
+                            </Frame.GestureRecognizers>
+                            <StackLayout Margin="8">                            
+                                <Image HeightRequest="300" HorizontalOptions="Start" Source="{Binding Photo}">                                       
+                                </Image>
                                 <Label Text="{Binding Tags}" FontAttributes="Bold" />
-                                <Label Text="{Binding DateTime}"/>
-                                <Label Text="{Binding Location}"/>
-                                <Label Text="{Binding Rating}"/>
-                            </StackLayout>                        
+                                <Label Text="{Binding DateTime}" />
+                                <Label Text="{Binding Location}" />
+                                <Label Text="{Binding Rating}" />
+                                <!--<Button Text="Remove Post" Command="{Binding RemovePost}" />-->                            
+                            </StackLayout>
+                        </Frame>
+                        </ContentView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
-
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -13,10 +13,10 @@
                 <Button Text="Take Photo" x:Name="TakePhotoButton" Command="{Binding TakePhotoCommand}" />
                 <Button Text="Upload Photo" x:Name="UploadPhotoButton" Command="{Binding UploadPhotoCommand}" />
                 <Entry Placeholder="Enter a tag" Text="{Binding CurrentTags}" Margin="10" x:Name="CategoryEntry" />
-                <Image HeightRequest="100" Source="{Binding CurrentPhoto}"/>
-                <Label Text="{Binding DateTime}" />
-                <Label Text="{Binding Location}" />
-                <Label Text="{Binding Tags}" />
+                <Image HeightRequest="300" Source="{Binding CurrentPhotoPath}" />
+                <Label Text="{Binding Post.DateTime}" />
+                <Label Text="{Binding Post.Location}" />
+                <Label Text="{Binding Post.Tags}" />
                 <Button Text="Submit" x:Name="SubmitButton" Command="{Binding CreatePostCommand}"/>
             </StackLayout>
         </StackLayout>

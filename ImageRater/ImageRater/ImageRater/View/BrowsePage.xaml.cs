@@ -16,7 +16,6 @@ namespace ImageRater.View
         public BrowsePage()
         {
             InitializeComponent();
-            BindingContext = new PostViewModel();
         }        
     }
 }

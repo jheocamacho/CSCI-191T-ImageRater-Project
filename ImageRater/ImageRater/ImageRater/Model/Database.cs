@@ -25,5 +25,10 @@ namespace ImageRater.Model
         {
             return _database.InsertAsync(post);
         }
+
+        public Task<int> RemovePostAsync(Post post)
+        {
+            return _database.DeleteAsync(post);
+        }
     }
 }

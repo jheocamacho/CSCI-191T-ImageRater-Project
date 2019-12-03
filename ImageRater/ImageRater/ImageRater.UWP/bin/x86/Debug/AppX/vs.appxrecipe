@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-02T09:55:52.814</Modified>
+      <Modified>2019-12-03T20:32:23.668</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\ImageRater.UWP.exe">
       <PackagePath>entrypoint\ImageRater.UWP.exe</PackagePath>
-      <Modified>2019-12-02T09:55:50.147</Modified>
+      <Modified>2019-12-03T20:32:20.285</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -116,7 +116,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\bin\Debug\netstandard2.0\ImageRater.dll">
       <PackagePath>ImageRater.dll</PackagePath>
-      <Modified>2019-12-02T09:55:45.415</Modified>
+      <Modified>2019-12-03T20:32:06.054</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -269,15 +269,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf">
       <PackagePath>Microsoft.UI.Xaml\DensityStyles\Compact.xbf</PackagePath>
-      <Modified>2019-12-02T09:37:39.042</Modified>
+      <Modified>2019-12-03T20:32:19.832</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-02T09:37:39.043</Modified>
+      <Modified>2019-12-03T20:32:19.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-02T09:37:39.043</Modified>
+      <Modified>2019-12-03T20:32:19.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -301,7 +301,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Core\ImageRater.UWP.exe">
       <PackagePath>ImageRater.UWP.exe</PackagePath>
-      <Modified>2019-12-02T09:55:52.806</Modified>
+      <Modified>2019-12-03T20:32:23.649</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

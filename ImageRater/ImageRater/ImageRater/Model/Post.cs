@@ -27,7 +27,16 @@ namespace ImageRater.Model
         private string datetime;
         private string tags;
         private int rating;
-        private Image photo;
+        private string photo;
+
+        public Post()
+        {
+            location = "Default location";
+            datetime = "Default datetime";
+            tags = "Default tags";
+            rating = 0;
+            photo = "Default photo";
+        }
 
         public string Location
         {
@@ -53,7 +62,7 @@ namespace ImageRater.Model
             set { rating = value; OnPropertyChange(); }
         }
 
-        public Image Photo
+        public string Photo
         {
             get { return photo; }
             set { photo = value; OnPropertyChange(); }

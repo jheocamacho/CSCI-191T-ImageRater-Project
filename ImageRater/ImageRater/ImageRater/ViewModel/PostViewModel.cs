@@ -17,6 +17,7 @@ namespace ImageRater.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
+        // list of posts to be used by the view and synced with the database
         private List<Post> posts;
         public List<Post> Posts
         {
@@ -28,6 +29,20 @@ namespace ImageRater.ViewModel
             }
         }
 
+        // hold the current post, meant to be used by Like, Dislike, and RemovePost functions
+        // not sure how to bind this to view yet
+        private Post currentPost;
+        public Post CurrentPost
+        {
+            get { return currentPost; }
+            set
+            {
+                currentPost = value;
+                OnPropertyChange();
+            }
+        }
+
+        // holds a single string of tags associated with a post, used by post page
         private string currentTags;
         public string CurrentTags
         {
@@ -39,50 +54,131 @@ namespace ImageRater.ViewModel
             }
         }
 
-        private Image currentPhoto;
-        public Image CurrentPhoto
+        // holds single photo path, used by post page
+        private string currentPhotoPath;
+        public string CurrentPhotoPath
         {
-            get { return currentPhoto; }
+            get { return currentPhotoPath; }
             set
             {
-                currentPhoto = value;
+                currentPhotoPath = value;
                 OnPropertyChange();
             }
         }
-               
+
+        // update/sync Posts list with database
+        private async Task UpdatePosts()
+        {
+            Posts = await App.Database.GetPostAsync();
+        }
+
         public PostViewModel()
         {
-            // Sample data to check if CollectionView binding in BrowsePage is working
-            Posts = new List<Post>() {
-                new Post()
-                {
-                    ID = 1,
-                    DateTime = "November 30, 2019 8:08pm",
-                    Location = "Fresno, CA",
-                    Tags = "Animal",
-                    Rating = 3
-                },
+            UpdatePosts();
 
-                new Post()
-                {
-                    ID = 2,
-                    DateTime = "December 1, 2019 12:00pm",
-                    Location = "Clovis, CA",
-                    Tags = "Landscape",
-                    Rating = 4
-                }
-            };
-
-            CreatePostCommand = new Command(async () => await CreateNewPost());
-            TakePhotoCommand = new Command(async () => await Camera.TakePhoto(CurrentPhoto = new Image()));
-            UploadPhotoCommand = new Command(async () => await Camera.UploadPhoto(CurrentPhoto = new Image()));
+            CreatePostCommand = new Command(async () => await CreatePost());
+            RemovePostCommand = new Command(async () => await RemovePost());
+            TakePhotoCommand = new Command(async () => CurrentPhotoPath = await Camera.TakePhoto());
+            UploadPhotoCommand = new Command(async () => CurrentPhotoPath = await Camera.UploadPhoto());
+            SwipeLeftCommand = new Command(SwipeLeft);
+            SwipeRightCommand = new Command(SwipeRight);
+            SwipeModeCommand = new Command(SwitchMode);
         }
-        
+
+        // commands for creating or removing a post
         public Command CreatePostCommand { get; }
+        public Command RemovePostCommand { get; }
+
+        // commands for taking or uploading a photo
         public Command TakePhotoCommand { get; }
         public Command UploadPhotoCommand { get; }
 
-        public async Task CreateNewPost()
+        // commands for swiping left or right (like/dislike, set/unset tags)
+        public Command SwipeLeftCommand { get; }
+        public Command SwipeRightCommand { get; }
+
+        // switch between Rate and Tag mode (for when the user swipes)
+        public Command SwipeModeCommand { get; }
+
+        // flag to determine what mode page is on, true means rate mode, false means tag mode
+        private bool rateMode = true;
+        public bool RateMode
+        {
+            get { return rateMode; }
+            set
+            {
+                rateMode = value;
+                OnPropertyChange();
+            }
+        }
+
+        // used in view to display which mode page is currently on
+        private string swipeMode = "Swipe to Rate Mode";
+        public string SwipeMode
+        {
+            get { return swipeMode; }
+            set
+            {
+                swipeMode = value;
+                OnPropertyChange();
+            }
+        }
+
+        // switch between rate mode and tag mode, adjusts bool then string
+        public void SwitchMode()
+        {
+            RateMode = !RateMode;
+            if (RateMode == true)
+            {
+                SwipeMode = "Swipe to Rate Mode";
+            }
+            else
+            {
+                SwipeMode = "Swipe to Tag Mode";
+            }
+            System.Diagnostics.Debug.WriteLine("RateMode is set to: " + RateMode);
+        }
+         
+        // function to handle whether to like/dislike, or set/unset tags, to be used in command
+        public void SwipeRight()
+        {
+            if (RateMode == true)
+            {
+                Like();
+                System.Diagnostics.Debug.WriteLine("Swiped right with RateMode on");
+            }
+            else
+                /* set tags functions */
+                System.Diagnostics.Debug.WriteLine("Swiped right with RateMode off");
+        }
+
+        // function to handle whether to like/dislike, or set/unset tags, to be used in command
+        public void SwipeLeft()
+        {
+            if (RateMode == true)
+            {
+                Dislike();
+                System.Diagnostics.Debug.WriteLine("Swiped left with RateMode on");
+            }
+            else
+                /* set tags functions */
+                System.Diagnostics.Debug.WriteLine("Swiped left with RateMode off");
+        }
+
+        // like a post function, increments rating
+        public void Like()
+        {
+            CurrentPost.Rating++;
+        }
+
+        // dislike a post function, decrements rating
+        public void Dislike()
+        {
+            CurrentPost.Rating--;
+        }
+
+        // used to create a post and add to database
+        public async Task CreatePost()
         {
             // get tag info
             string tags = CurrentTags;
@@ -96,20 +192,23 @@ namespace ImageRater.ViewModel
             var placemark = await Location.ReverseGeocodeLocation(location);
             string address = placemark.FeatureName;
 
-            // Exception throw during this next statement at line 76:
-            // System.AggregateException: 'One or more errors occurred. (Don't know about Xamarin.Forms.Image)'
-            // Inner Exception
-            // NotSupportedException: Don't know about Xamarin.Forms.Image
-            await App.Database.SavePostAsync(new Post
+            await App.Database.SavePostAsync(new Post()
             {
                 Location = address,
                 DateTime = dateTime,
                 Tags = tags,
-                //Photo = CurrentPhoto,
+                Photo = CurrentPhotoPath,
                 Rating = 0
             });
-            
-            Posts = await App.Database.GetPostAsync();            
-        }        
+
+            Posts = await App.Database.GetPostAsync();
+        }
+
+        // used to remove a post from the database
+        public async Task RemovePost()
+        {
+            await App.Database.RemovePostAsync(CurrentPost);
+            Posts = await App.Database.GetPostAsync();
+        }
     }
 }
