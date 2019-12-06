@@ -4,21 +4,28 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ImageRater.View.PostPage">
+             x:Class="ImageRater.View.PostPage"
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand" Padding="10">
-            <Label Text="Post" FontSize="40" />
-            <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand" Padding="10">
-                <Label Text="Please take a photo or upload your own." />
-                <Button Text="Take Photo" x:Name="TakePhotoButton" Command="{Binding TakePhotoCommand}" />
-                <Button Text="Upload Photo" x:Name="UploadPhotoButton" Command="{Binding UploadPhotoCommand}" />
-                <Entry Placeholder="Enter a tag" Text="{Binding CurrentTags}" Margin="10" x:Name="CategoryEntry" />
-                <Image HeightRequest="300" Source="{Binding CurrentPhotoPath}" />
-                <Label Text="{Binding Post.DateTime}" />
-                <Label Text="{Binding Post.Location}" />
-                <Label Text="{Binding Post.Tags}" />
-                <Button Text="Submit" x:Name="SubmitButton" Command="{Binding CreatePostCommand}"/>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
+                <Label Text="Post" FontSize="40" />
+            
+                <Frame BackgroundColor="WhiteSmoke" CornerRadius="4" HasShadow="True" Padding="5" Margin="5">
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="Please take a photo or upload your own." />
+                        <Button Text="Take Photo" x:Name="TakePhotoButton" Command="{Binding TakePhotoCommand}" />
+                        <Button Text="Upload Photo" x:Name="UploadPhotoButton" Command="{Binding UploadPhotoCommand}" />
+                        <Entry Placeholder="Enter a tag" Text="{Binding CurrentTags}" Margin="10" x:Name="CategoryEntry" />
+                        <Image HeightRequest="200" Source="{Binding NewPost.Photo}" />
+                        <Label Text="{Binding NewPost.DateTime}" />
+                        <Label Text="{Binding NewPost.Location}" />
+                        <Label Text="{Binding NewPost.Tags}" />
+                        <Button Text="Submit" x:Name="SubmitButton" Command="{Binding CreatePostCommand}"/>
+                    </StackLayout>
+                </Frame>
+            
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

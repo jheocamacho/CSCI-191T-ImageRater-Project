@@ -16,7 +16,7 @@ namespace ImageRater
             {
                 if (database == null)
                 {
-                    database = new Model.Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "posts.db3"));
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "posts.db3"));
                 }
                 return database;
             }
@@ -26,7 +26,7 @@ namespace ImageRater
 		{
 			InitializeComponent();
 
-			MainPage = new View.MasterPage();
+			MainPage = new NavigationPage(new View.MasterPage());
 		}
 
 		protected override void OnStart()

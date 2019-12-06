@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ImageRater.View.DetailPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
+            <Label Text="Details" FontSize="40"/>
+            
+            <Frame BackgroundColor="WhiteSmoke" CornerRadius="4" HasShadow="True" Padding="5" Margin="5">
+                <Frame.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Right" Command="{Binding SwipeRightCommand}" CommandParameter="Right" />
+                    <SwipeGestureRecognizer Direction="Left" Command="{Binding SwipeLeftCommand}" CommandParameter="Left" />
+                </Frame.GestureRecognizers>
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="10">
+                    <Image HeightRequest="300" Source="{Binding CurrentPost.Photo}" />
+                    <Label Text="{Binding CurrentPost.Tags}" />
+                    <Label Text="{Binding CurrentPost.DateTime}" />
+                    <Label Text="{Binding CurrentPost.Location}" />
+                    <Label Text="{Binding CurrentPost.Rating}" />
+                    <Button Text="{Binding SwipeMode}" WidthRequest="200" Command="{Binding SwipeModeCommand}" />
+                    <Button Text="Delete Post" Command="{Binding RemovePostCommand}" Clicked="DeleteButton_Clicked" />
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

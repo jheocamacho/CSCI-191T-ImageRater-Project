@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using ImageRater.Model;
 namespace ImageRater.ViewModel
 {
-    class PostViewModel : INotifyPropertyChanged
+    public class PostViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -29,8 +29,8 @@ namespace ImageRater.ViewModel
             }
         }
 
-        // hold the current post, meant to be used by Like, Dislike, and RemovePost functions
-        // not sure how to bind this to view yet
+        // holds the current post, in the BrowsePage and PhotoPage,
+        // meant to be used by Like, Dislike, and RemovePost functions
         private Post currentPost;
         public Post CurrentPost
         {
@@ -38,6 +38,18 @@ namespace ImageRater.ViewModel
             set
             {
                 currentPost = value;
+                OnPropertyChange();
+            }
+        }
+
+        // holds the new post that is created in the PostPage
+        private Post newPost;
+        public Post NewPost
+        {
+            get { return newPost; }
+            set
+            {
+                newPost = value;
                 OnPropertyChange();
             }
         }
@@ -192,15 +204,19 @@ namespace ImageRater.ViewModel
             var placemark = await Location.ReverseGeocodeLocation(location);
             string address = placemark.FeatureName;
 
-            await App.Database.SavePostAsync(new Post()
-            {
-                Location = address,
+            // assign data to new post (which will be used in the PostPage view)
+            NewPost = new Post {
                 DateTime = dateTime,
+                Location = address,
                 Tags = tags,
                 Photo = CurrentPhotoPath,
-                Rating = 0
-            });
+                Rating = 0        
+            };
 
+            // save new post to database
+            await App.Database.SavePostAsync(NewPost);
+
+            // update Post list (seen in BrowsePage)
             Posts = await App.Database.GetPostAsync();
         }
 

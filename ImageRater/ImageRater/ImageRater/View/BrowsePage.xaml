@@ -5,14 +5,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ImageRater.View.BrowsePage">
+    
     <ContentPage.Content>
-        <StackLayout x:Name="ImageView"
-                     VerticalOptions="CenterAndExpand" 
-                     HorizontalOptions="CenterAndExpand"
-                     Padding="10">
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
+            <Label Text="Browse" FontSize="40" />
 
             <StackLayout Margin="8">
-                <Button Text="{Binding SwipeMode}" Command="{Binding SwipeModeCommand}" />
                 <Picker x:Name="OrganizeByPicker" Title="Select how to organize." >
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
@@ -25,9 +23,10 @@
                 </Picker>
             </StackLayout>
 
-            <CollectionView x:Name="collectionView" ItemsSource="{Binding Posts}">
-                <CollectionView.ItemTemplate>
+            <ListView x:Name="PostList" ItemsSource="{Binding Posts}" ItemTapped="PostList_ItemTapped">
+                <ListView.ItemTemplate>
                     <DataTemplate>
+                        <ViewCell>
                         <ContentView>
                         <Frame BackgroundColor="WhiteSmoke" CornerRadius="4" HasShadow="True" Padding="5" Margin="5">
                             <Frame.GestureRecognizers>
@@ -40,14 +39,14 @@
                                 <Label Text="{Binding Tags}" FontAttributes="Bold" />
                                 <Label Text="{Binding DateTime}" />
                                 <Label Text="{Binding Location}" />
-                                <Label Text="{Binding Rating}" />
-                                <!--<Button Text="Remove Post" Command="{Binding RemovePost}" />-->                            
+                                <Label Text="{Binding Rating}" />                       
                             </StackLayout>
                         </Frame>
                         </ContentView>
+                        </ViewCell>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                </ListView.ItemTemplate>
+            </ListView>
             
         </StackLayout>
     </ContentPage.Content>

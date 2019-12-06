@@ -67,25 +67,5 @@ namespace ImageRater.Model
             get { return photo; }
             set { photo = value; OnPropertyChange(); }
         }
-
-        //public string Base64Image { get; set; }
-
-        /*
-        public void SerializePhoto(object PhotoImage)
-        {
-            if (PhotoImage == null)
-                return;
-
-            string imageBase64String = (string)PhotoImage;
-            byte[] imageAsBytes = Convert.FromBase64String(imageBase64String);
-
-            using (var ms = new MemoryStream(imageAsBytes))
-            {
-                var decoder = System.Windows.Media.Imaging.BitmapDecoder.Create(ms, BitmapCreateOptions.None, BitmapCacheOptions.OnLoad);
-
-                Base64Image = decoder.Frames[0];
-            }
-        }
-        */
     }
 }

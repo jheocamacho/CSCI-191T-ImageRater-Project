@@ -21,9 +21,21 @@ namespace ImageRater.Model
             return _database.Table<Post>().ToListAsync();
         }
 
+        public Task<Post> GetPostAsync(int id)
+        {
+            return _database.Table<Post>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
+
         public Task<int> SavePostAsync(Post post)
         {
-            return _database.InsertAsync(post);
+            if (post.ID != 0)
+            {
+                return _database.UpdateAsync(post);
+            }
+            else
+            {
+                return _database.InsertAsync(post);
+            }
         }
 
         public Task<int> RemovePostAsync(Post post)

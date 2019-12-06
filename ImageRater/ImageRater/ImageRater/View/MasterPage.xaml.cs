@@ -16,7 +16,7 @@ namespace ImageRater.View
         public MasterPage()
         {
             InitializeComponent();
-            BindingContext = new PostViewModel();
+            BindingContext = ViewModelLocator.MainViewModel;
         }
     }
 }

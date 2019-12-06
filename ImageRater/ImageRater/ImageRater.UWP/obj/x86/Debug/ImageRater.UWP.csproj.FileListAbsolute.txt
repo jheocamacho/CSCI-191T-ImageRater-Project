@@ -59,6 +59,7 @@ C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636161003180000000.json
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885562160000000.json
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\e_sqlite3.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\App.xbf
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\MainPage.xbf
@@ -73,6 +74,11 @@ C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Plugin.Permissions.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\System.Runtime.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLite-net.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLitePCLRaw.core.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Microsoft.Graphics.Canvas.dll
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Microsoft.Graphics.Canvas.winmd
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\Plugin.Geolocator.dll
@@ -133,9 +139,3 @@ C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636161003180000000.json
 C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885562160000000.json
-C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\e_sqlite3.dll
-C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLite-net.dll
-C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_green.dll
-C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
-C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLitePCLRaw.core.dll
-C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater.UWP\bin\x86\Debug\SQLitePCLRaw.provider.e_sqlite3.dll

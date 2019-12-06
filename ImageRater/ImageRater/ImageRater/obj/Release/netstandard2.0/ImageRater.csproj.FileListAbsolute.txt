@@ -1,0 +1,14 @@
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\bin\Release\netstandard2.0\ImageRater.deps.json
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\bin\Release\netstandard2.0\ImageRater.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\bin\Release\netstandard2.0\ImageRater.pdb
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\View\BrowsePage.xaml.g.cs
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\View\MapPage.xaml.g.cs
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\View\MasterPage.xaml.g.cs
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\View\PhotoPage.xaml.g.cs
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\View\PostPage.xaml.g.cs
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\ImageRater.AssemblyInfoInputs.cache
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\ImageRater.AssemblyInfo.cs
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\ImageRater.dll
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-Project\ImageRater\ImageRater\ImageRater\obj\Release\netstandard2.0\ImageRater.pdb

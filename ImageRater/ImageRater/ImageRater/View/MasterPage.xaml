@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:ImageRater.View;assembly=ImageRater"
              mc:Ignorable="d"
-             x:Class="ImageRater.View.MasterPage">
+             x:Class="ImageRater.View.MasterPage"
+             NavigationPage.HasNavigationBar="false">
     <!--Pages can be added as references or inline-->
   <local:BrowsePage Title="Browse" />
   <local:PostPage Title="Post" />
