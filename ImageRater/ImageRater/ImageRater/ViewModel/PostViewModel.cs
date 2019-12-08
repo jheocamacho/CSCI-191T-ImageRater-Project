@@ -55,13 +55,28 @@ namespace ImageRater.ViewModel
         }
 
         // holds a single string of tags associated with a post, used by post page
-        private string currentTags;
+        private List<string> currentTags = new List<string>();
+		private string currentTag;
         public string CurrentTags
         {
-            get { return currentTags; }
+            get
+			{
+				return currentTag;
+				if (currentTags.Count > 0) return currentTags[0];
+				return "";
+//				string value = "";
+//				if ((currentTags == null) || (currentTags.Count == 0)) return value;
+//				for (int i = 0; i < currentTags.Count; i++)
+//				{
+//					if (i > 0) value += ", ";
+//					value = value + currentTags[i];
+//				}
+//				return value;	
+			}
             set
             {
-                currentTags = value;
+				this.currentTags.Add(value);
+                currentTag = value;
                 OnPropertyChange();
             }
         }
@@ -92,7 +107,9 @@ namespace ImageRater.ViewModel
             RemovePostCommand = new Command(async () => await RemovePost());
             TakePhotoCommand = new Command(async () => CurrentPhotoPath = await Camera.TakePhoto());
             UploadPhotoCommand = new Command(async () => CurrentPhotoPath = await Camera.UploadPhoto());
-            SwipeLeftCommand = new Command(SwipeLeft);
+			NewTagCommand = new Command(async () => await CreateTag());
+			EnterTagCommand = new Command(async () => await EnterTag());
+			SwipeLeftCommand = new Command(SwipeLeft);
             SwipeRightCommand = new Command(SwipeRight);
             SwipeModeCommand = new Command(SwitchMode);
         }
@@ -105,8 +122,12 @@ namespace ImageRater.ViewModel
         public Command TakePhotoCommand { get; }
         public Command UploadPhotoCommand { get; }
 
-        // commands for swiping left or right (like/dislike, set/unset tags)
-        public Command SwipeLeftCommand { get; }
+		// commands for adding new or existing tags to a photo
+		public Command NewTagCommand { get; }
+		public Command EnterTagCommand { get; }
+
+		// commands for swiping left or right (like/dislike, set/unset tags)
+		public Command SwipeLeftCommand { get; }
         public Command SwipeRightCommand { get; }
 
         // switch between Rate and Tag mode (for when the user swipes)
@@ -204,17 +225,19 @@ namespace ImageRater.ViewModel
             var placemark = await Location.ReverseGeocodeLocation(location);
             string address = placemark.FeatureName;
 
-            // assign data to new post (which will be used in the PostPage view)
-            NewPost = new Post {
-                DateTime = dateTime,
-                Location = address,
-                Tags = tags,
+			System.Diagnostics.Debug.WriteLine("!!! START");
+			// assign data to new post (which will be used in the PostPage view)
+			NewPost = new Post {
+				DateTime = dateTime,
+				Location = address,
+//				Tags = currentTags,// tags,
                 Photo = CurrentPhotoPath,
                 Rating = 0        
             };
+			System.Diagnostics.Debug.WriteLine("!!! END");
 
-            // save new post to database
-            await App.Database.SavePostAsync(NewPost);
+			// save new post to database
+			await App.Database.SavePostAsync(NewPost);
 
             // update Post list (seen in BrowsePage)
             Posts = await App.Database.GetPostAsync();
@@ -226,5 +249,60 @@ namespace ImageRater.ViewModel
             await App.Database.RemovePostAsync(CurrentPost);
             Posts = await App.Database.GetPostAsync();
         }
-    }
+
+		// used to create a new tag and add it to the database
+		public async Task EnterTag()
+		{
+			string newTag = CurrentTags;
+			System.Diagnostics.Debug.WriteLine("! ! ! TEST ! ! ! (" + newTag + ")");
+			currentTags.Add(newTag);
+		}
+		public async Task CreateTag()
+		{
+			System.Diagnostics.Debug.WriteLine("! ! ! ! !IT HAPPENED!");
+			string result = "Default";
+//			result = await Application.Current.MainPage.DisplayPromptAsync("Add a new Tag", "Enter the exact name of the new tag.");
+			System.Diagnostics.Debug.WriteLine("Test(" + result + ")");
+			
+
+
+
+
+
+
+
+
+
+//			await DisplayAlert("Hi");
+//			string result = await DisplayPromptAsync("Add a new Tag", "Enter the exact name of the new tag.");
+//
+//			// get tag info
+//			string tags = CurrentTags;
+//
+//			// get current time for post
+//			var dt = System.DateTime.Now;
+//			string dateTime = String.Format("{0:f}", dt);
+//
+//			// get current location for post
+//			var location = await Location.GetCurrentPosition();
+//			var placemark = await Location.ReverseGeocodeLocation(location);
+//			string address = placemark.FeatureName;
+//
+//			// assign data to new post (which will be used in the PostPage view)
+//			NewPost = new Post
+//			{
+//				DateTime = dateTime,
+//				Location = address,
+//				Tags = tags,
+//				Photo = CurrentPhotoPath,
+//				Rating = 0
+//			};
+//
+//			// save new post to database
+//			await App.Database.SavePostAsync(NewPost);
+//
+//			// update Post list (seen in BrowsePage)
+//			Posts = await App.Database.GetPostAsync();
+		}
+	}
 }

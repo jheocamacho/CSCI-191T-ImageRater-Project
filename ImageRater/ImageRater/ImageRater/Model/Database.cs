@@ -34,6 +34,7 @@ namespace ImageRater.Model
             }
             else
             {
+//				return new Task<int>(new System.Func<int>(() => 1));
                 return _database.InsertAsync(post);
             }
         }

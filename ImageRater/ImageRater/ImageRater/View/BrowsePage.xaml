@@ -36,7 +36,7 @@
                             <StackLayout Margin="8">                            
                                 <Image HeightRequest="300" HorizontalOptions="Start" Source="{Binding Photo}">                                       
                                 </Image>
-                                <Label Text="{Binding Tags}" FontAttributes="Bold" />
+ <!--                               <Label Text="{Binding Tags}" FontAttributes="Bold" />-->
                                 <Label Text="{Binding DateTime}" />
                                 <Label Text="{Binding Location}" />
                                 <Label Text="{Binding Rating}" />                       
