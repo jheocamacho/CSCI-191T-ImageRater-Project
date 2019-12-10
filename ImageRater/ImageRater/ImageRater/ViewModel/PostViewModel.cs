@@ -55,28 +55,14 @@ namespace ImageRater.ViewModel
         }
 
         // holds a single string of tags associated with a post, used by post page
-        private List<string> currentTags = new List<string>();
-		private string currentTag;
-        public string CurrentTags
+		private string currentTags;
+		private string postTags = "";
+		public string CurrentTags
         {
-            get
-			{
-				return currentTag;
-				if (currentTags.Count > 0) return currentTags[0];
-				return "";
-//				string value = "";
-//				if ((currentTags == null) || (currentTags.Count == 0)) return value;
-//				for (int i = 0; i < currentTags.Count; i++)
-//				{
-//					if (i > 0) value += ", ";
-//					value = value + currentTags[i];
-//				}
-//				return value;	
-			}
+            get { return currentTags; }
             set
             {
-				this.currentTags.Add(value);
-                currentTag = value;
+                currentTags = value;
                 OnPropertyChange();
             }
         }
@@ -89,6 +75,17 @@ namespace ImageRater.ViewModel
             set
             {
                 currentPhotoPath = value;
+                OnPropertyChange();
+            }
+        }
+
+        private string searchTag;
+        public string SearchTag
+        {
+            get { return searchTag; }
+            set
+            {
+                searchTag = value;
                 OnPropertyChange();
             }
         }
@@ -107,11 +104,12 @@ namespace ImageRater.ViewModel
             RemovePostCommand = new Command(async () => await RemovePost());
             TakePhotoCommand = new Command(async () => CurrentPhotoPath = await Camera.TakePhoto());
             UploadPhotoCommand = new Command(async () => CurrentPhotoPath = await Camera.UploadPhoto());
-			NewTagCommand = new Command(async () => await CreateTag());
-			EnterTagCommand = new Command(async () => await EnterTag());
+			EnterTagCommand = new Command(EnterTag);
 			SwipeLeftCommand = new Command(SwipeLeft);
             SwipeRightCommand = new Command(SwipeRight);
             SwipeModeCommand = new Command(SwitchMode);
+            SearchTagsCommand = new Command(organizeByTheSearchTag);
+            ResetSearchCommand = new Command(async () => await UpdatePosts());
         }
 
         // commands for creating or removing a post
@@ -123,7 +121,6 @@ namespace ImageRater.ViewModel
         public Command UploadPhotoCommand { get; }
 
 		// commands for adding new or existing tags to a photo
-		public Command NewTagCommand { get; }
 		public Command EnterTagCommand { get; }
 
 		// commands for swiping left or right (like/dislike, set/unset tags)
@@ -132,6 +129,10 @@ namespace ImageRater.ViewModel
 
         // switch between Rate and Tag mode (for when the user swipes)
         public Command SwipeModeCommand { get; }
+
+        // search the posts for those with the given tags or reset them
+        public Command SearchTagsCommand { get; }
+        public Command ResetSearchCommand { get; }
 
         // flag to determine what mode page is on, true means rate mode, false means tag mode
         private bool rateMode = true;
@@ -213,8 +214,11 @@ namespace ImageRater.ViewModel
         // used to create a post and add to database
         public async Task CreatePost()
         {
-            // get tag info
-            string tags = CurrentTags;
+			// get tag info
+			string tags = postTags;
+
+            // reset tags after post is submitted
+			postTags = "";
 
             // get current time for post
             var dt = System.DateTime.Now;
@@ -225,16 +229,14 @@ namespace ImageRater.ViewModel
             var placemark = await Location.ReverseGeocodeLocation(location);
             string address = placemark.FeatureName;
 
-			System.Diagnostics.Debug.WriteLine("!!! START");
 			// assign data to new post (which will be used in the PostPage view)
 			NewPost = new Post {
 				DateTime = dateTime,
 				Location = address,
-//				Tags = currentTags,// tags,
+				Tags = tags,
                 Photo = CurrentPhotoPath,
                 Rating = 0        
             };
-			System.Diagnostics.Debug.WriteLine("!!! END");
 
 			// save new post to database
 			await App.Database.SavePostAsync(NewPost);
@@ -251,58 +253,63 @@ namespace ImageRater.ViewModel
         }
 
 		// used to create a new tag and add it to the database
-		public async Task EnterTag()
+		public void EnterTag()
 		{
 			string newTag = CurrentTags;
-			System.Diagnostics.Debug.WriteLine("! ! ! TEST ! ! ! (" + newTag + ")");
-			currentTags.Add(newTag);
+            // if first tag, no bar in the beginning, otherwise append a bar to the end of it and the new tag right after
+			postTags += ((postTags == "") ? "" : "|") + newTag;
 		}
-		public async Task CreateTag()
+
+        // given a post and a string, it checks if that string is a tag of the post
+        public bool containsTag(Post p, string str)	
 		{
-			System.Diagnostics.Debug.WriteLine("! ! ! ! !IT HAPPENED!");
-			string result = "Default";
-//			result = await Application.Current.MainPage.DisplayPromptAsync("Add a new Tag", "Enter the exact name of the new tag.");
-			System.Diagnostics.Debug.WriteLine("Test(" + result + ")");
-			
+			bool candidateFound = false;				//Bool indicating if the string is found.
+			bool searchForBar = false;					//When the current tag doesn't qualify as the string, we skip the rest of the tag until we go to the next tag.
+			int strIndex = 0;							//Starting index of the string.
+			int lastIndex = str.Length - 1;				//Ending index of the string.
 
+			for (int i = 0; i < p.Tags.Length; i++)		//Itterating across all the tags in the post, character by character.
+			{
+				if (p.Tags[i] == '|')					//If it's a bar
+				{
+					if (strIndex > lastIndex) break;	//Break if we're found our string
+					searchForBar = false;				//Otherwise mark the bar as found
+					continue;							//And skip to the next char
+				}
+				if ((strIndex > lastIndex)	||			//If the next index after the string isn't a bar
+					(p.Tags[i] != str[strIndex]))		//or if the current char in the tag doesn't match the same indexed char in the string
+				{
+					candidateFound = false;				//Then this tag isn't a candidate
+					searchForBar = true;				//Skip the rest of the tag, find the nearest bar
+					strIndex = 0;						//Start over looking for the string from scratch.
+				}
+				else									//Otherwise if all characters i nthe tag thus far line up with the string
+				{
+					strIndex++;							//continue to compare it to the next index of the string
+					candidateFound = true;				//and we have a running candidate.
+				}
+			}
 
+            if (strIndex <= lastIndex) candidateFound = false;    //If we didn't read the full string, then it's false.
 
-
-
-
-
-
-
-//			await DisplayAlert("Hi");
-//			string result = await DisplayPromptAsync("Add a new Tag", "Enter the exact name of the new tag.");
-//
-//			// get tag info
-//			string tags = CurrentTags;
-//
-//			// get current time for post
-//			var dt = System.DateTime.Now;
-//			string dateTime = String.Format("{0:f}", dt);
-//
-//			// get current location for post
-//			var location = await Location.GetCurrentPosition();
-//			var placemark = await Location.ReverseGeocodeLocation(location);
-//			string address = placemark.FeatureName;
-//
-//			// assign data to new post (which will be used in the PostPage view)
-//			NewPost = new Post
-//			{
-//				DateTime = dateTime,
-//				Location = address,
-//				Tags = tags,
-//				Photo = CurrentPhotoPath,
-//				Rating = 0
-//			};
-//
-//			// save new post to database
-//			await App.Database.SavePostAsync(NewPost);
-//
-//			// update Post list (seen in BrowsePage)
-//			Posts = await App.Database.GetPostAsync();
+            return candidateFound;	//If by the end we found a candidate, the function returns true. Otherwise it returns false.
 		}
-	}
+
+		public void organizeByTheSearchTag()	//Sets the posts in the browse page to be the same list of posts but sorted by a given tage
+		{
+			List<Post> containingList = new List<Post>();		//The list of all posts that contain the tag, otherwise in the same order
+			List<Post> notContainingList = new List<Post>();	//The list of all posts that do not contain the tag, otherwise in the same order
+
+			for (int i = 0; i < posts.Count; i++)	//For all posts
+			{
+				if (containsTag(posts[i], SearchTag)) containingList.Add(posts[i]);	//Put the ones with the tag in one list
+				else notContainingList.Add(posts[i]);								//and the others to the other
+			}
+
+			for (int i = 0; i < notContainingList.Count; i++)	//For all posts that do not contain the tag,
+				containingList.Add(notContainingList[i]);		//append them to the end of the list with the tags.
+
+			Posts = containingList;					//Set the posts that are in the browse page to be the posts in the new sorted order.
+		}
+    }
 }

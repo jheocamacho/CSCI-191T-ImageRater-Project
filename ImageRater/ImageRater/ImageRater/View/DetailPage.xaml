@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="ImageRater.View.DetailPage">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
             <Label Text="Details" FontSize="40"/>
             
@@ -15,16 +16,17 @@
                     <SwipeGestureRecognizer Direction="Left" Command="{Binding SwipeLeftCommand}" CommandParameter="Left" />
                 </Frame.GestureRecognizers>
                 <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="10">
-					<Button Text="Delete Post" Command="{Binding RemovePostCommand}" Clicked="DeleteButton_Clicked" />
 					<Image HeightRequest="300" Source="{Binding CurrentPost.Photo}" />
-<!--                    <Label Text="{Binding CurrentPost.Tags}" />-->
+                    <Label Text="{Binding CurrentPost.Tags}" />
                     <Label Text="{Binding CurrentPost.DateTime}" />
                     <Label Text="{Binding CurrentPost.Location}" />
                     <Label Text="{Binding CurrentPost.Rating}" />
                     <Button Text="{Binding SwipeMode}" WidthRequest="200" Command="{Binding SwipeModeCommand}" />
+                    <Button Text="Delete Post" Command="{Binding RemovePostCommand}" Clicked="DeleteButton_Clicked" />
                 </StackLayout>
             </Frame>
             
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -25,8 +25,7 @@ namespace ImageRater.Model
 
         private string location;
         private string datetime;
-//        private string tags;
-		private List<string> tags;
+        private string tags;
         private int rating;
         private string photo;
 
@@ -34,7 +33,7 @@ namespace ImageRater.Model
         {
             location = "Default location";
             datetime = "Default datetime";
-            tags = new List<string>() { "Default tag" };
+			tags = "Default tag";
             rating = 0;
             photo = "Default photo";
         }
@@ -51,17 +50,11 @@ namespace ImageRater.Model
             set { datetime = value; OnPropertyChange(); }
         }
 
-//         public string Tags
-//         {
-//             get { return tags[0]; }
-//             set { tags[0] = value; OnPropertyChange(); }
-//         }
-
-		public List<string> Tags
-		{
-			get { return tags; }
-			set { tags = value; OnPropertyChange(); }
-		}
+         public string Tags
+         {
+             get { return tags; }
+             set { tags = value; OnPropertyChange(); }
+         }
 
 		public int Rating
         {

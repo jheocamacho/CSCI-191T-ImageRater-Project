@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rober\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {}
+    "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rober\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {
+    "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rober\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj",
+        "projectUniqueName": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj",
         "projectName": "ImageRater",
-        "projectPath": "C:\\Users\\rober\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj",
-        "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rober\\OneDrive\\Documents\\GitHub\\CSCI-191T-Project\\ImageRater\\ImageRater\\ImageRater\\obj\\",
+        "projectPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj",
+        "packagesPath": "C:\\Users\\jheom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jheom\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

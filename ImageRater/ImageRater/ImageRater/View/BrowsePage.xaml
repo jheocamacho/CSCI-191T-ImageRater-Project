@@ -11,6 +11,11 @@
             <Label Text="Browse" FontSize="40" />
 
             <StackLayout Margin="8">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Placeholder="Enter a tag to search" Text="{Binding SearchTag}" WidthRequest="200"/>
+                    <Button Text="Search" Command="{Binding SearchTagsCommand}" />
+                    <Button Text="Reset" Command="{Binding ResetSearchCommand}" />
+                </StackLayout>
                 <Picker x:Name="OrganizeByPicker" Title="Select how to organize." >
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
@@ -36,7 +41,7 @@
                             <StackLayout Margin="8">                            
                                 <Image HeightRequest="300" HorizontalOptions="Start" Source="{Binding Photo}">                                       
                                 </Image>
- <!--                               <Label Text="{Binding Tags}" FontAttributes="Bold" />-->
+                                <Label Text="{Binding Tags}" FontAttributes="Bold" />
                                 <Label Text="{Binding DateTime}" />
                                 <Label Text="{Binding Location}" />
                                 <Label Text="{Binding Rating}" />                       
