@@ -6372,24 +6372,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jheom\\.nuget\\packages\\": {},
+    "C:\\Users\\Student\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\ImageRater.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\ImageRater.iOS.csproj",
       "projectName": "ImageRater.iOS",
-      "projectPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\ImageRater.iOS.csproj",
-      "packagesPath": "C:\\Users\\jheom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\ImageRater.iOS.csproj",
+      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jheom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6403,8 +6403,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {
-              "projectPath": "C:\\Users\\jheom\\OneDrive\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj"
+            "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj": {
+              "projectPath": "C:\\Users\\Student\\Documents\\GitHub\\CSCI-191T-ImageRater-Project\\ImageRater\\ImageRater\\ImageRater\\ImageRater.csproj"
             }
           }
         }

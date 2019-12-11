@@ -350,12 +350,18 @@ namespace ImageRater.ViewModel
 
 		public void organizeByDateTime()
 		{
-			Posts.Sort();	//I overloaded the < operator of Post in its class definition. This sorts by time, where earlier time points have higher precedence.
+//			Posts.Sort();	//I overloaded the < operator of Post in its class definition. This sorts by time, where earlier time points have higher precedence.
+            Posts.Sort((x, y) => x.getStarDate().CompareTo(y.getStarDate()));
+
+            List<Post> Temp = Posts;
+            Posts = null;
+            Posts = Temp;
 		}
 
 		public void organizeByDistance()    //This function sorts by distance from the user, using a lambda function that invokes the DistanceFromUser function in the Location class of the model.
 		{
-			Posts.Sort((x, y) => (Location.DistanceFromUser(x.Location) < Location.DistanceFromUser(y.Location)) ? -1 : ((Location.DistanceFromUser(x.Location) > Location.DistanceFromUser(y.Location)) ? 1 : 0));
+ //            Posts.Sort((x, y) => (Location.DistanceFromUser(x.Location) < Location.DistanceFromUser(y.Location)) ? -1 : ((Location.DistanceFromUser(x.Location) > Location.DistanceFromUser(y.Location)) ? 1 : 0));
+            Posts.Sort((x, y) => Location.DistanceFromUser(x.Location).CompareTo(Location.DistanceFromUser(y.Location)));
 
             List<Post> Temp = Posts;
             Posts = null;
@@ -366,7 +372,7 @@ namespace ImageRater.ViewModel
 		{
 			Posts.Sort((x, y) => x.Rating.CompareTo(y.Rating));
 
-            List<Post> Temp = Posts;
+          List<Post> Temp = Posts;
 			Posts = null;
 			Posts = Temp;
 		}

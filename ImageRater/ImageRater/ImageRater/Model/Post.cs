@@ -184,5 +184,73 @@ namespace ImageRater.Model
 		{
 			return (!(a < b));
 		}
-    }
+
+		public double getStarDate()
+		{
+			//Example string: "Thursday, December 5, 2019 11:27 AM"
+			//Weekday is Phase 1, we throw it away. Month is Phase 2, day is Phase 3, year is phase 4, time is phase 5, meridiem is phase 6.
+
+			string aYear = "";
+			string aMonth = "";
+			string aDay = "";
+			string aHours = "";
+			string aMinutes = "";
+			string aMeridiem = "";
+
+			int phase = 1;
+			for (int i = 0; i < DateTime.Length; i++)
+			{
+				if (phase == 1)
+				{
+					if (DateTime[i] == ' ') phase = 2;
+				}
+				else if (phase == 2)
+				{
+					if (DateTime[i] == ' ') phase = 3;
+					else if (DateTime[i] == ',') continue;
+					else aMonth += DateTime[i];
+				}
+				else if (phase == 3)
+				{
+					if (DateTime[i] == ' ') phase = 4;
+					else if (DateTime[i] == ',') continue;
+					else aDay += DateTime[i];
+				}
+				else if (phase == 4)
+				{
+					if (DateTime[i] == ' ') phase = 5;
+					else aYear += DateTime[i];
+				}
+				else if (phase == 5)
+				{
+					if (DateTime[i] == ':') phase = 6;
+					else aHours += DateTime[i];
+				}
+				else if (phase == 6)
+				{
+					if (DateTime[i] == ' ') phase = 7;
+					else aMinutes += DateTime[i];
+				}
+				else if (phase == 7)
+				{
+					if (DateTime[i] == ' ') break;
+					else aMeridiem += DateTime[i];
+				}
+			}
+
+			double aTimeValue = (Convert.ToDouble(aHours) + (Convert.ToDouble(aMinutes) / 60d)) / 24d;
+			if (aMeridiem == "PM") aTimeValue += (double)0.5;
+
+			int aYearValue = Int32.Parse(aYear);
+
+			int aMonthValue = (aMonth == "January") ? 0 : ((aMonth == "February") ? 31 : ((aMonth == "March") ? 59 : ((aMonth == "April") ? 90 : ((aMonth == "May") ? 120 : ((aMonth == "June") ? 151 : ((aMonth == "July") ? 181 : ((aMonth == "August") ? 212 : ((aMonth == "September") ? 243 : ((aMonth == "October") ? 273 : ((aMonth == "November") ? 304 : 334))))))))));
+			if ((aYearValue % 4 == 0) && (aMonthValue >= 59)) aMonthValue++;	//Adding an extra day for leap years.
+
+			int aDayValue = Int32.Parse(aDay);
+
+			double timeOfYear = (aTimeValue + aDayValue + aMonthValue) / ((aYearValue % 4 == 0) ? 366 : 365);
+
+			return aYearValue + timeOfYear;
+		}
+	}
 }

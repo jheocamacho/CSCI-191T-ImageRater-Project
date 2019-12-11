@@ -12,16 +12,21 @@ namespace ImageRater.Model
     {
         public static async Task<Xamarin.Essentials.Location> GetCurrentPosition()
         {
+            System.Diagnostics.Debug.WriteLine("! ! ! GETCURRENTPOSITION 1");
             var request = new GeolocationRequest(GeolocationAccuracy.Best);
+            System.Diagnostics.Debug.WriteLine("! ! ! GETCURRENTPOSITION 2");
             var location = await Geolocation.GetLocationAsync(request);
 
+            System.Diagnostics.Debug.WriteLine("! ! ! GETCURRENTPOSITION 3");
             if (location != null)
             {
+                System.Diagnostics.Debug.WriteLine("! ! ! GETCURRENTPOSITION 4");
                 Debug.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
                 return location;
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("! ! ! GETCURRENTPOSITION 5");
                 return null;
             }
         }
@@ -77,15 +82,19 @@ namespace ImageRater.Model
         // receive the post address string and return the distance in miles as a double between there and the user
         public static double DistanceFromUser(string postAddress)
         {
+            System.Diagnostics.Debug.WriteLine("! ! ! DISTANCEFROMUSER 1");
             // get user's location
             var userLocation = GetCurrentPosition().Result;
 
+            System.Diagnostics.Debug.WriteLine("! ! ! DISTANCEFROMUSER 2");
             // get post's location (from geocoding address string)
             var postLocation = GeocodeLocation(postAddress).Result;
 
+            System.Diagnostics.Debug.WriteLine("! ! ! DISTANCEFROMUSER 3");
             // built-in function to determine the distance in miles
             double distance = Xamarin.Essentials.Location.CalculateDistance(userLocation, postLocation, DistanceUnits.Miles);
-            
+
+            System.Diagnostics.Debug.WriteLine("! ! ! DISTANCEFROMUSER 4");
             return distance;
         }
     }
