@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Text;
 using Xamarin.Forms;
 using ImageRater.Model;
+using Xamarin.Forms.Maps;
 namespace ImageRater.ViewModel
 {
     public class PostViewModel : INotifyPropertyChanged
@@ -90,6 +91,23 @@ namespace ImageRater.ViewModel
             }
         }
 
+        // Map object used in MapPage, needed to add post pins
+        private Xamarin.Forms.Maps.Map map = new Xamarin.Forms.Maps.Map()
+        {
+            IsShowingUser = true,
+            HeightRequest = 1000,
+            WidthRequest = 1000
+        };
+        public Xamarin.Forms.Maps.Map Map
+        {
+            get { return map; }
+            set
+            {
+                map = value;
+                OnPropertyChange();
+            }
+        }
+
         // update/sync Posts list with database
         private async Task UpdatePosts()
         {
@@ -110,6 +128,9 @@ namespace ImageRater.ViewModel
             SwipeModeCommand = new Command(SwitchMode);
             SearchTagsCommand = new Command(organizeByTheSearchTag);
             ResetSearchCommand = new Command(async () => await UpdatePosts());
+            SortByTimeCommand = new Command(organizeByDateTime);
+            SortByDistanceCommand = new Command(organizeByDistance);
+            SortByRatingCommand = new Command(organizeByRating);
         }
 
         // commands for creating or removing a post
@@ -133,6 +154,11 @@ namespace ImageRater.ViewModel
         // search the posts for those with the given tags or reset them
         public Command SearchTagsCommand { get; }
         public Command ResetSearchCommand { get; }
+
+        // sorting commands for buttons in browse
+        public Command SortByTimeCommand { get; }
+        public Command SortByDistanceCommand { get; }
+        public Command SortByRatingCommand { get; }
 
         // flag to determine what mode page is on, true means rate mode, false means tag mode
         private bool rateMode = true;
@@ -229,8 +255,18 @@ namespace ImageRater.ViewModel
             var placemark = await Location.ReverseGeocodeLocation(location);
             string address = placemark.FeatureName;
 
-			// assign data to new post (which will be used in the PostPage view)
-			NewPost = new Post {
+            // add pin to map
+            Pin postPin = new Pin
+            {
+                Label = tags,
+                Address = address,
+                Type = PinType.Place,
+                Position = new Position(location.Latitude, location.Longitude)
+            };
+            map.Pins.Add(postPin);
+
+            // assign data to new post (which will be used in the PostPage view)
+            NewPost = new Post {
 				DateTime = dateTime,
 				Location = address,
 				Tags = tags,
@@ -252,8 +288,8 @@ namespace ImageRater.ViewModel
             Posts = await App.Database.GetPostAsync();
         }
 
-		// used to create a new tag and add it to the database
-		public void EnterTag()
+        // used to create a new tag and add it to the database
+        public void EnterTag()
 		{
 			string newTag = CurrentTags;
             // if first tag, no bar in the beginning, otherwise append a bar to the end of it and the new tag right after
@@ -311,5 +347,28 @@ namespace ImageRater.ViewModel
 
 			Posts = containingList;					//Set the posts that are in the browse page to be the posts in the new sorted order.
 		}
-    }
-}
+
+		public void organizeByDateTime()
+		{
+			Posts.Sort();	//I overloaded the < operator of Post in its class definition. This sorts by time, where earlier time points have higher precedence.
+		}
+
+		public void organizeByDistance()    //This function sorts by distance from the user, using a lambda function that invokes the DistanceFromUser function in the Location class of the model.
+		{
+			Posts.Sort((x, y) => (Location.DistanceFromUser(x.Location) < Location.DistanceFromUser(y.Location)) ? -1 : ((Location.DistanceFromUser(x.Location) > Location.DistanceFromUser(y.Location)) ? 1 : 0));
+
+            List<Post> Temp = Posts;
+            Posts = null;
+            Posts = Temp;
+        }
+
+		public void organizeByRating()    //This function sorts posts by their rating relative to one another, uses a lambda implementation.
+		{
+			Posts.Sort((x, y) => x.Rating.CompareTo(y.Rating));
+
+            List<Post> Temp = Posts;
+			Posts = null;
+			Posts = Temp;
+		}
+	}
+}	

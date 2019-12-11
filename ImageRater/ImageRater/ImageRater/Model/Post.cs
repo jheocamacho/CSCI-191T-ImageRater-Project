@@ -67,5 +67,122 @@ namespace ImageRater.Model
             get { return photo; }
             set { photo = value; OnPropertyChange(); }
         }
+
+		public static bool operator< (Post a, Post b)
+		{
+			//Example string: "Thursday, December 5, 2019 11:27 AM"
+			//Weekday is Phase 1, we throw it away. Month is Phase 2, day is Phase 3, year is phase 4, time is phase 5, meridiem is phase 6.
+
+			string aYear = "";
+			string aMonth = "";
+			string aDay = "";
+			string aTime = "";
+			string aMeridiem = "";
+
+			string bYear = "";
+			string bMonth = "";
+			string bDay = "";
+			string bTime = "";
+			string bMeridiem = "";
+
+			int phase = 1;
+			for (int i = 0; i < a.DateTime.Length; i++)
+			{
+				if (phase == 1)
+				{
+					if (a.DateTime[i] == ' ') phase = 2;
+				}
+				else if (phase == 2)
+				{
+					if (a.DateTime[i] == ' ') phase = 3;
+					else if (a.DateTime[i] == ',') continue;
+					else aMonth += a.DateTime[i];
+				}
+				else if (phase == 3)
+				{
+					if (a.DateTime[i] == ' ') phase = 4;
+					else if (a.DateTime[i] == ',') continue;
+					else aDay += a.DateTime[i];
+				}
+				else if (phase == 4)
+				{
+					if (a.DateTime[i] == ' ') phase = 5;
+					else aYear += a.DateTime[i];
+				}
+				else if (phase == 5)
+				{
+					if (a.DateTime[i] == ' ') phase = 6;
+					else if (a.DateTime[i] == ':') aTime += ',';
+					else aTime += a.DateTime[i];
+				}
+				else if (phase == 6)
+				{
+					if (a.DateTime[i] == ' ') break;
+					else aMeridiem += a.DateTime[i];
+				}
+			}
+
+			phase = 1;
+			for (int i = 0; i < b.DateTime.Length; i++)
+			{
+				if (phase == 1)
+				{
+					if (b.DateTime[i] == ' ') phase = 2;
+				}
+				else if (phase == 2)
+				{
+					if (b.DateTime[i] == ' ') phase = 3;
+					else if (b.DateTime[i] == ',') continue;
+					else bMonth += b.DateTime[i];
+				}
+				else if (phase == 3)
+				{
+					if (b.DateTime[i] == ' ') phase = 4;
+					else if (b.DateTime[i] == ',') continue;
+					else bDay += b.DateTime[i];
+				}
+				else if (phase == 4)
+				{
+					if (b.DateTime[i] == ' ') phase = 5;
+					else bYear += b.DateTime[i];
+				}
+				else if (phase == 5)
+				{
+					if (b.DateTime[i] == ' ') phase = 6;
+					else if (b.DateTime[i] == ':') bTime += ',';
+					else bTime += b.DateTime[i];
+				}
+				else if (phase == 6)
+				{
+					if (b.DateTime[i] == ' ') break;
+					else bMeridiem += b.DateTime[i];
+				}
+			}
+
+			int aYearValue =		Int32.Parse(aYear);
+			int aMonthValue =		(aMonth == "January") ? 1 : ((aMonth == "February") ? 2 : ((aMonth == "March") ? 3 : ((aMonth == "April") ? 4 : ((aMonth == "May") ? 5 : ((aMonth == "June") ? 6 : ((aMonth == "July") ? 7 : ((aMonth == "August") ? 8 : ((aMonth == "September") ? 9 : ((aMonth == "October") ? 10 : ((aMonth == "November") ? 11 : 12))))))))));
+			int aDayValue =			Int32.Parse(aDay);
+			double aTimeValue =		Convert.ToDouble(aTime);
+			if (aMeridiem == "PM")	aTimeValue += (double)12.00;
+
+			int bYearValue = Int32.Parse(bYear);
+			int bMonthValue = (bMonth == "January") ? 1 : ((bMonth == "February") ? 2 : ((bMonth == "March") ? 3 : ((bMonth == "April") ? 4 : ((bMonth == "May") ? 5 : ((bMonth == "June") ? 6 : ((bMonth == "July") ? 7 : ((bMonth == "August") ? 8 : ((bMonth == "September") ? 9 : ((bMonth == "October") ? 10 : ((bMonth == "November") ? 11 : 12))))))))));
+			int bDayValue = Int32.Parse(bDay);
+			double bTimeValue = Convert.ToDouble(bTime);
+			if (bMeridiem == "PM") bTimeValue += (double)12.00;
+
+			if (aYearValue != bYearValue)			return aYearValue < bYearValue;
+			else if (aMonthValue != bMonthValue)	return aMonthValue < bMonthValue;
+			else if (aDayValue != bDayValue)		return aDayValue < bDayValue;
+			else if (aTimeValue != bTimeValue)		return aTimeValue < bTimeValue;
+			else System.Diagnostics.Debug.WriteLine("Error in the Post < Post operator overload function. The inputs were: (" + a.DateTime + ") and (" + b.DateTime + ")");
+
+			return false;
+		}
+
+		public static bool operator> (Post a, Post b)
+		{
+			return (!(a < b));
+		}
     }
 }

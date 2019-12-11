@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors"
              mc:Ignorable="d"
              x:Class="ImageRater.View.BrowsePage">
     
@@ -16,19 +17,14 @@
                     <Button Text="Search" Command="{Binding SearchTagsCommand}" />
                     <Button Text="Reset" Command="{Binding ResetSearchCommand}" />
                 </StackLayout>
-                <Picker x:Name="OrganizeByPicker" Title="Select how to organize." >
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Organize by location</x:String>
-                            <x:String>Organize by time</x:String>
-                            <x:String>Organize by category</x:String>
-                            <x:String>Organize by rating</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Time" Command="{Binding SortByTimeCommand}" />
+                    <Button Text="Distance" Command="{Binding SortByDistanceCommand}" />
+                    <Button Text="Rating" Command="{Binding SortByRatingCommand}" />
+                </StackLayout>                
             </StackLayout>
 
-            <ListView x:Name="PostList" ItemsSource="{Binding Posts}" ItemTapped="PostList_ItemTapped">
+            <ListView x:Name="PostList" ItemsSource="{Binding Posts}" ItemTapped="PostList_ItemTapped" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -38,9 +34,8 @@
                                 <SwipeGestureRecognizer Direction="Right" Command="{Binding SwipeRightCommand}" CommandParameter="Right" />
                                 <SwipeGestureRecognizer Direction="Left" Command="{Binding SwipeLeftCommand}" CommandParameter="Left" />
                             </Frame.GestureRecognizers>
-                            <StackLayout Margin="8">                            
-                                <Image HeightRequest="300" HorizontalOptions="Start" Source="{Binding Photo}">                                       
-                                </Image>
+                            <StackLayout Margin="8">
+                                <Image HeightRequest="300" HorizontalOptions="Start" Source="{Binding Photo}" />
                                 <Label Text="{Binding Tags}" FontAttributes="Bold" />
                                 <Label Text="{Binding DateTime}" />
                                 <Label Text="{Binding Location}" />

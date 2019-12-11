@@ -8,6 +8,6 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
     <StackLayout>
         <Label Text="Map" FontSize="40" Margin="10"/>
-        <maps:Map x:Name="map" HeightRequest="1000" WidthRequest="1000" IsShowingUser="true" />
+        <ContentView Content="{Binding Map}"/>
     </StackLayout>
 </ContentPage>

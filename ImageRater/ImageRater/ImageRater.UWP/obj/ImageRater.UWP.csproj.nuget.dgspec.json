@@ -43,6 +43,10 @@
       "frameworks": {
         "uap10.0.17763": {
           "dependencies": {
+            "Behaviors.Forms": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.9, )"
@@ -75,11 +79,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.991211, )"
+              "version": "[4.3.0.991221, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.3.0.991211, )"
+              "version": "[4.3.0.991221, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -156,6 +160,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Behaviors.Forms": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
             "Mobile.BuildTools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -190,11 +198,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.991211, )"
+              "version": "[4.3.0.991221, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.3.0.991211, )"
+              "version": "[4.3.0.991221, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

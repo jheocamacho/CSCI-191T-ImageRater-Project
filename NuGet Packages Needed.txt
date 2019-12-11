@@ -1,0 +1,21 @@
+NuGet Packages that were necessary for the features and functionality of our project (probably half of these are included by Xamarin by default):
+
+Xamarin.Forms
+Xamarin.Forms.Maps
+Xamarin.Essentials
+Xamarin.Android.Support.Core.Utils
+Xamarin.Android.Support.CustomTabs
+Xamarin.Android.Support.Design
+Xamarin.Android.Support.v4
+Xamarin.Android.Support.v7
+Xamarin.Android.Support.v7.AppCompat
+Xamarin.Android.Support.v7.CardView
+Xamarin.Android.Support.v7.MediaRouter
+Xam.Plugin.Geolocator
+Xam.Plugin.Media
+Plugin.Permissions
+sqlite-net-pcl
+Newtonsoft.Json
+Microsoft.NETCore.UniversalWindowsPlatform
+Mobile.BuildTools
+NETStandard.Library
