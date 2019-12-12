@@ -80,15 +80,15 @@ namespace ImageRater.Model
         }
 
         // receive the post address string and return the distance in miles as a double between there and the user
-        public static double DistanceFromUser(string postAddress)
+        public static async Task<double> DistanceFromUser(string postAddress)
         {
             System.Diagnostics.Debug.WriteLine("! ! ! DISTANCEFROMUSER 1");
             // get user's location
-            var userLocation = GetCurrentPosition().Result;
+            var userLocation = await GetCurrentPosition();
 
             System.Diagnostics.Debug.WriteLine("! ! ! DISTANCEFROMUSER 2");
             // get post's location (from geocoding address string)
-            var postLocation = GeocodeLocation(postAddress).Result;
+            var postLocation = await GeocodeLocation(postAddress);
 
             System.Diagnostics.Debug.WriteLine("! ! ! DISTANCEFROMUSER 3");
             // built-in function to determine the distance in miles

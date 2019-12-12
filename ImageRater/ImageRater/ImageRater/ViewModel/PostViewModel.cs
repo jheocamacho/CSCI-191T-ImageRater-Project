@@ -361,7 +361,7 @@ namespace ImageRater.ViewModel
 		public void organizeByDistance()    //This function sorts by distance from the user, using a lambda function that invokes the DistanceFromUser function in the Location class of the model.
 		{
  //            Posts.Sort((x, y) => (Location.DistanceFromUser(x.Location) < Location.DistanceFromUser(y.Location)) ? -1 : ((Location.DistanceFromUser(x.Location) > Location.DistanceFromUser(y.Location)) ? 1 : 0));
-            Posts.Sort((x, y) => Location.DistanceFromUser(x.Location).CompareTo(Location.DistanceFromUser(y.Location)));
+            Posts.Sort((x, y) => Location.DistanceFromUser(x.Location).Result.CompareTo(Location.DistanceFromUser(y.Location).Result));
 
             List<Post> Temp = Posts;
             Posts = null;

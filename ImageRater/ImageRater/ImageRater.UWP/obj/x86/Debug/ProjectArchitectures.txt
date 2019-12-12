@@ -1,1 +1,1 @@
-C:\Users\Student\Documents\GitHub\CSCI-191T-ImageRater-Project\ImageRater\ImageRater\ImageRater.UWP\ImageRater.UWP.csproj;x86
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-ImageRater-Project\ImageRater\ImageRater\ImageRater.UWP\ImageRater.UWP.csproj;x86

@@ -57,3 +57,4 @@ C:\Users\Student\Documents\GitHub\CSCI-191T-ImageRater-Project\ImageRater\ImageR
 C:\Users\Student\Documents\GitHub\CSCI-191T-ImageRater-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Student\Documents\GitHub\CSCI-191T-ImageRater-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\ImageRater.dll
 C:\Users\Student\Documents\GitHub\CSCI-191T-ImageRater-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\ImageRater.pdb
+C:\Users\jheom\OneDrive\Documents\GitHub\CSCI-191T-ImageRater-Project\ImageRater\ImageRater\ImageRater\obj\Debug\netstandard2.0\ImageRater.csprojAssemblyReference.cache
